@@ -1,1 +1,31 @@
+import com.vader.sentiment.analyzer.SentimentAnalyzer;
+import com.vader.sentiment.util.ScoreType;
+class SentimentAnalysis {
 
+    public static void main(String[] args) {
+        // Example text string
+        String text = "I love coding! It's so much fun.";
+
+        // Perform sentiment analysis
+        String sentiment = analyzeSentiment(text);
+
+        // Output the sentiment
+        System.out.println("Sentiment of the text: " + sentiment);
+    }
+
+    public static String analyzeSentiment(String text) {
+        SentimentAnalyzer sentimentAnalyzer = new SentimentAnalyzer();
+        sentimentAnalyzer.setInputString(text);
+        sentimentAnalyzer.analyze();
+        double score = sentimentAnalyzer.getPolarityScore();
+
+        // Determine sentiment based on the score
+        if (score >= 0.05) {
+            return "Positive";
+        } else if (score <= -0.05) {
+            return "Negative";
+        } else {
+            return "Neutral";
+        }
+    }
+}
