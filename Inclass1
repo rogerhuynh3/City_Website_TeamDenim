@@ -1,0 +1,46 @@
+import java.util.Arrays;
+import java.util.List;
+
+class Inclass1 {
+
+    public static void main(String[] args) {
+        // Example text string
+        String text = "Coding is ok.";
+
+        // Perform sentiment analysis
+        String sentiment = analyzeSentiment(text);
+        
+        // Output the sentiment
+        System.out.println("\nSentiment of the text, '"+ text +"' : " + sentiment+"\n");
+    }
+
+    public static String analyzeSentiment(String text) {
+        // Tokenize the text into words
+        List<String> words = Arrays.asList(text.split("\\s+"));
+        
+        // Define positive and negative word lists (you can expand these lists as needed)
+        List<String> positiveWords = Arrays.asList("love", "fun", "happy", "awesome");
+        List<String> negativeWords = Arrays.asList("hate", "sad", "angry", "terrible");
+        
+        // Count positive and negative words in the text
+        int positiveCount = 0;
+        int negativeCount = 0;
+        
+        for (String word : words) {
+            if (positiveWords.contains(word.toLowerCase())) {
+                positiveCount++;
+            } else if (negativeWords.contains(word.toLowerCase())) {
+                negativeCount++;
+            }
+        }
+        
+        // Determine sentiment based on the counts
+        if (positiveCount > negativeCount) {
+            return "Positive";
+        } else if (negativeCount > positiveCount) {
+            return "Negative";
+        } else {
+            return "Neutral";
+        }
+    }
+}
