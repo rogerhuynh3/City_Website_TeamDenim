@@ -80,6 +80,71 @@
         .servicesimg { 
             float: ;
         }
+
+                /* Dropdowns for Service tab */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn,
+        .dropbtn:focus {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -120,21 +185,102 @@
             </article>
         </div>
 
-            <h2>Popular Services</h2>
+        <h2>Services</h2>
         <div class="serviceimg">
-            <a href="">
-                <img src="IMGS/citylogo.png" alt="Click to Visit Service">
-            </a>
-            <a href="">
-                <img src="IMGS/citylogo.png" alt="Click to Visit Service">
-            </a>
-            <a href="">
-                <img src="IMGS/citylogo.png" alt="Click to Visit Service">
-            </a>
-            <a href="">
-                <img src="IMGS/citylogo.png" alt="Click to Visit Service">
-            </a>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('services&SafetyDropdown')">Services & Safety
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="services&SafetyDropdown">
+                        <a href="#">Water and sewer</a>
+                        <a href="#">Sanitation</a>
+                        <a href="#">Police department</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('payments&TaxesDropdown')">Payments & Taxes
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="payments&TaxesDropdown">
+                        <a href="#">Pay water bill</a>
+                        <a href="#">Assessment</a>
+                        <a href="#">Property tax</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('jobsDropdown')">Jobs
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="jobsDropdown">
+                        <a href="#">Job Opportunities</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('publicWorkServicesDropdown')">Public Work Services
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="publicWorkServicesDropdown">
+                        <a href="#">Limb and branch clean up</a>
+                        <a href="#">Leaf clean up</a>
+                        <a href="#">Snow and ice removal</a>
+                        <a href="#">Hydrant flushing</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('clerkDropdown')">Clerk
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="clerkDropdown">
+                        <a href="#">Elections</a>
+                        <a href="#">Requst Record</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('businessesDropdown')">Businesses
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="businessesDropdown">
+                        <a href="#">Local businesses</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('permits&licensingDropdown')">Permits and Licensing
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="permits&licensingDropdown">
+                        <a href="#">Building permits</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('recreation&CultureDropdown')">Recreation & Culture
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="recreation&CultureDropdown">
+                        <a href="#">Parks and recreation</a>
+                        <a href="#">Parking permits</a>
+                        <a href="#">Festivals and events</a>
+                        <a href="#">Reservations</a>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="contact-info">
+            <h2 id="Contact">Contact Information</h2>
+            <p><strong>Contact With Us</strong>
+                <br>Phone Number: <br>Email:
+                <br>Address: <br>Social Media:
+            </p>
+        </div>
+
 
         <div class ="contact-info">
             <h2 id="Contact">Contact Information</h2>
@@ -150,5 +296,34 @@
     <footer>
         <p>&copy; 2024 State Name. All Rights Reserved.</p>
     </footer>
+        <script>
+        /* Toggle between hiding and showing the dropdown content */
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            } else {
+                // Hide all other dropdowns before showing this one
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.remove('show');
+                }
+                dropdown.classList.add('show');
+            }
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var dropdown = dropdowns[i];
+                    if (dropdown.classList.contains('show')) {
+                        dropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
