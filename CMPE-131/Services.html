@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - State Website</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header { 
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        /* Center the text */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Style the image and text container */
+        .item {
+            border: 2px solid #000000; /* Border style and color */
+            border-radius: 5px; /* Optional: rounded corners */
+            margin: 0 10px 10px 10px; /* Optional margin around images */
+            padding: 10px; /* Optional padding inside the container */
+            text-align: center; /* Left align the text */
+            display: inline-block;
+            vertical-align: top; /* Align items to the top */
+            width: calc(20% - 5px); /* Adjust width based on the number of items per row */
+            box-sizing: border-box; /* Include padding and border in the width calculation */
+        }
+
+        /* Style the text */
+        .text {
+            font-size: 1.2em;
+            color: #333; /* Set text color */
+            margin-bottom: 5px; /* Optional margin below the text */
+        }
+
+        /* Style the links */
+        .service-links {
+            display: flex; /* Make links flex container */
+            flex-wrap: wrap; /* Allow links to wrap */
+            gap: 10px; /* Gap between links */
+        }
+
+        .service-links a {
+            color: #333; /* Set link color */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold; /* Make links bold */
+            padding: 5px; /* Add padding to links */
+            background-color: #ddd; /* Background color for links */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+        }
+
+        .service-link li {
+            border-bottom: 1px solid #90bade;
+            margin: 0;
+        }
+
+        .service-list li a {
+            display: block;
+            padding: 5px 5px 5px 0.5em;
+            color: #4981b6;
+            text-decoration: none;
+        }
+
+        .service-list li a:hover {
+            color: #3d5dc2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="IMGS/citylogo.png">`
+        <h1>State Name</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Government.html">Government</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Services</h2>
+            <div class="container">
+                <div class="item">
+                        <img src="IMGS/citylogo.png" alt="Image 1">
+                        <div class="text">Services & Safety</div>
+                        <ul class="service-list">
+                            <li><a href="#">Water and sewer</a></li>
+                            <li><a href="#">Sanitation</a></li>
+                            <li><a href="#">Police department</a></li>
+                        </ul>
+                </div>
+
+                <div class="item">
+                        <img src="IMGS/citylogo.png" alt="Image 2">
+                        <div class="text">Payments & Taxes</div>
+                        <ul class="service-list">
+                            <li><a href="#">Pay water bill</a></li>
+                            <li><a href="#">Assessment</a></li>
+                            <li><a href="#">Property tax</a></li>
+                        </ul>
+                </div>
+
+                <div class="item">
+                        <img src="IMGS/citylogo.png" alt="Image 3">
+                        <div class="text">Jobs</div>
+                        <ul class="service-list">
+                            <li><a href="#">Job Oppurtunites</a></li>
+                        </ul>
+                </div>
+
+                <div class="item">
+                        <img src="IMGS/citylogo.png" alt="Image 3">
+                        <div class="text">Public Work Services</div>
+                        <ul class="service-list">
+                            <li><a href="#">Limb and branch clean up</a></li>
+                            <li><a href="#">Leaf clean up</a></li>
+                            <li><a href="#">Snow and ice removal</a></li>
+                            <li><a href="#">Hydrant flushing</a></li>
+                        </ul>
+                </div>
+
+                <div class="item">
+                        <img src="IMGS/citylogo.png" alt="Image 3">
+                        <div class="text">Clerk</div>
+                        <ul class="service-list">
+                            <li><a href="#">Elections</a></li>
+                            <li><a href="#">Request Record</a></li>
+                        </ul>
+                </div>
+
+                <div class="item">
+                        <img src="IMGS/citylogo.png" alt="Image 3">
+                        <div class="text">Businesses</div>
+                        <ul class="service-list">
+                            <li><a href="#">Local businesses</a></li>
+
+                        </ul>
+                </div>
+
+                <div class="item">
+                        <img src="IMGS/citylogo.png" alt="Image 3">
+                        <div class="text">Permits and Licensing</div>
+                        <ul class="service-list">
+                            <li><a href="#">Building permits</a></li>
+
+                        </ul>
+                </div>
+
+                <div class="item">
+                        <img src="IMGS/citylogo.png" alt="Image 3">
+                        <div class="text">Recreation & Culture</div>
+                        <ul class="service-list">
+                            <li><a href="#">Parks and recreation</a></li>
+                            <li><a href="#">Parking permits</a></li>
+                            <li><a href="#">Festivals and events</a></li>
+                            <li><a href="#">Reservations</a></li>
+                        </ul>
+                </div>
+
+                <div class="item">
+                    <img src="IMGS/citylogo.png" alt="Image 3">
+                    <div class="text">Payment</div>
+                    <ul class="service-list">
+                        <li><a href="https://bsaonline.com/OnlinePayment/OnlinePaymentSearch?PaymentApplicationType=10&uid=590">Water and Sewer</a></li>
+                        <li><a href="https://bsaonline.com/OnlinePayment/OnlinePaymentSearch?PaymentApplicationType=4&uid=590">Property Tax</a></li>
+                    </ul>
+                </div>
+
+               <div class="item">
+                    <img src="IMGS/citylogo.png" alt="Image 3">
+                   <div class="text">Report an issue</div>
+                  <ul class="service-list">
+                      <li><a href="#">Missed trash pickup</a></li>
+                      <li><a href="#">Street light outage</a></li>
+                      <li><a href="#">Noise complaint</a></li>
+                      <li><a href="#">Code violation</a></li>
+                      <li><a href="#">Dead animal</a></li>
+                      <li><a href="#">Pothole</a></li>
+                      <li><a href="#">Vandalism</a></li>
+                   </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 State Name. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
