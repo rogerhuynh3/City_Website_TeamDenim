@@ -4,25 +4,25 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="nav-bar.html"/>
-        <link rel="stylesheet" href="navbar.css"/>
-        <link rel="stylesheet" href="contact.css"/>
+        <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html"/>
+        <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+        <link rel="stylesheet" href="../Contact Page/contact.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"/>
         <title>Contact Us</title>
     </head>
     <body>
         <div id="navbar-container"></div>
-        <script>
-            // Fetch and include nav-bar.html using JavaScript
-            fetch('nav-bar.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('navbar-container').innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Error fetching nav-bar.html:', error);
-                });
-        </script>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
         <div class="send-message-info">
             <h1 class="message-title">SEND US A MESSAGE</h1>
             <form id="send_message">
