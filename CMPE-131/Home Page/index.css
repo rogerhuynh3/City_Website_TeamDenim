@@ -1,0 +1,169 @@
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header-img {
+    vertical-align: middle;
+    border: none; /* Remove border */
+    padding: 0; 
+}
+
+header, .opening-image {
+    margin: 0;
+}
+
+/* Welcome image and message */
+.opening-image {
+    background-image: url('https://lansing501.com/community/williamston.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.opening-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.opening-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Services Dropdown */
+article {
+    float: left;
+    width: 70%;
+    background-color: #f1f1f1;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 50px;
+}
+
+main {
+    padding: 20px;
+}
+
+.announcement {
+    color: #333;
+    margin-top: 20px;
+    float: left;
+    width: 90%;
+    background-color: #f1f1f1;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 30px;
+}
+
+.services, .current-events {
+    width: 50%; /* Set the width of each section */
+    float: left; /* Float the sections to make them appear side by side */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    padding: 20px; /* Add padding to each section */
+}
+
+.current-events {
+    clear: both; 
+}
+
+.contact-info { 
+    margin-top: 20px;
+    text-align: left; 
+    float: left;
+}
+img {
+    border: 2px solid #000000; /* Border style and color */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 5px; /* Optional: space between border and image */
+    float: center;
+}
+.servicesimg { 
+    margin-top: 100px;
+    float: left;
+    width: 20%;
+}
+
+/* Dropdowns for Service tab */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
+    background-color: #910031;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: bottom;
+    width: 100%;
+}
