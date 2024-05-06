@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css"/>
     <title>Community Page</title>
     <style>
         /* CSS for the tab bar */
@@ -45,19 +49,26 @@
         }
 
         /* Set background image for the entire page */
-        body {
-            background-image: url('/Users/alisha/Desktop/pic/bg.png');            
+        /*body {
+            background-image: url('/Users/alisha/Desktop/CMPE 131/bg.png');            
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-        }
+        }*/
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Community Page</h1>
+    <nav>
+        <a href="Index.html">Home</a>
+        <a href="AboutUs.html">About</a>
+        <a href="#">Services</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+
+    <h1 class="about">Community Page</h1>
     
     <div class="tab">
         <a href="#" class="tablinks" onclick="openTab(event, 'things-to-do')">Things to do</a>
@@ -100,4 +111,3 @@
     </script>
 </body>
 </html>
-
