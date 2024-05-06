@@ -1,0 +1,104 @@
+/* Global styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav Bar */
+nav {
+    background-color: #910031;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Align logo and nav links to start and end */
+    align-items: center; /* Center vertically */
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-bar li:last-child {
+    margin-right: 0;
+}
+
+.header-img {
+    vertical-align: middle;
+}
+
+.nav-bar li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Contact section */
+.contact_info {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contactus-title {
+    color: #000000;
+}
+
+.contact_info h2 {
+    font-size: 18px;
+}
+
+/* Form styles */
+.send-message-info {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.message-title {
+    color: #000000;
+}
+
+form {
+    margin-top: 50px;
+    text-align: center;
+}
+
+form h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+form input[type="submit"] {
+    background-color: #3d5a80;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #7d8491;
+}
