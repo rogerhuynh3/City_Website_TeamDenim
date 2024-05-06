@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Page</title>
+    <style>
+        /* CSS for the tab bar */
+        .tab {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        /* Style the tab links */
+        .tab a {
+            color: black;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            border: 1px solid #ccc;
+            border-radius: 5px 5px 0 0;
+            background-color: #ddd;
+            margin-right: 10px;
+        }
+
+        /* Change background color of tabs on hover */
+        .tab a:hover {
+            background-color: #ccc;
+        }
+
+        /* Create an active/current tablink class */
+        .tab a.active {
+            background-color: #f1f1f1;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Set background image for the entire page */
+        body {
+            background-image: url('/Users/alisha/Desktop/pic/bg.png');            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Community Page</h1>
+    
+    <div class="tab">
+        <a href="#" class="tablinks" onclick="openTab(event, 'things-to-do')">Things to do</a>
+        <a href="#" class="tablinks" onclick="openTab(event, 'news')">News</a>
+        <a href="#" class="tablinks" onclick="openTab(event, 'meetings')">Meetings</a>
+    </div>
+    
+    <div id="things-to-do" class="tabcontent">
+        <h2>Things to do</h2>
+        <p>Volunteer for community events, join a community group or club, attend community meetings.</p>
+    </div>
+    
+    <div id="news" class="tabcontent">
+        <h2>News</h2>
+        <p>Stay updated with the latest community news and announcements.</p>
+    </div>
+    
+    <div id="meetings" class="tabcontent">
+        <h2>Meetings</h2>
+        <p>Information about upcoming community meetings and events.</p>
+    </div>
+    
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Show the first tab by default
+        document.getElementsByClassName("tablinks")[0].click();
+    </script>
+</body>
+</html>
 
