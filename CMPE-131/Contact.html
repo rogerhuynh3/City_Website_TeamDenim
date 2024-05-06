@@ -4,20 +4,54 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles2.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"/>
         <title>Contact Us</title>
     </head>
     <body>
         <nav>
-            <a href="Index.html">Home</a>
-            <a href="AboutUs.html">About</a>
-            <a href="#">Services</a>
-            <a href="Contact.html">Contact</a>
+            <img class="header-img" src="https://lh3.googleusercontent.com/pw/AP1GczPgRwQzzg6dlKtrm2XKCVHfdW8nVxgGrgk0qbu-e52KNgxRkXZkkmQO9jHrs7S77lvI5aPlAEL7CE4lGnCV4z2RSnE9e2KtAudkyReqc9YoBMkH6IMZ=w2400" 
+            width="70" 
+            alt="City of Williamston logo"/>
+            <ul class="nav-bar">
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="AboutUs.html">ABOUT US</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="Contact.html">CONTACT US</a></li>
+            </ul>
         </nav>
-        <h1>Contact Us</h1>
-        <h2>Phone: (517) 655-2774 <br> 
-            FAX: (517) 655-2797 <br>
-            Adress: 161 East Grand River Avenue Williamston, MI 48895 <br>
-            Hours: Monday-Friday: 8:00am - 5:00pm Saturday-Sunday: Closed
-        </h2>
+        <div class="send-message-info">
+            <h1 class="message-title">SEND US A MESSAGE</h1>
+            <form id="send_message">
+                <label class="enter">ENTER YOUR NAME</label>
+                <label for="first_name" id="first_name-label">
+                    <input id="first_name" type="text" placeholder="FIRST NAME" required/>
+                </label>
+            <label for="last_name" id="last_name-label">
+                <input id="last_name" type="text" placeholder="LAST NAME" required/>
+            </label>
+            <br>
+            <label class="enter">ENTER YOUR EMAIL</label>
+            <label for="email" id="email-label">
+                <input id="email" type="email" placeholder="johnsmith08@gmail.com" required/>
+            </label>
+            <br>
+            <label class="enter">ENTER YOUR MESSAGE</label>
+            <label for="message">
+                <textarea id="message" name="message" rows="3" cols="30" placeholder="When is the banquet?"></textarea>
+                <br>
+                <input id="submit" type="submit" value="SUBMIT"/>
+            </label>
+            </form>
+        </div>        
+        <br><br>
+        <div class="contact_info">
+            <h1 class="contactus-title">CONTACT US</h1>
+            <h2>Phone: (517) 655-2774 <br> 
+                FAX: (517) 655-2797 <br>
+                Address: 161 East Grand River Avenue Williamston, MI 48895 <br>
+                Hours: Monday-Friday: 8:00am - 5:00pm Saturday-Sunday: Closed
+            </h2>
+        </div>
     </body>
 </html>
