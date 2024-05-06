@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - State Website</title>
+    <style>
+      /* Your CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px; /* Optional: rounded corners */
+      }
+      nav {
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 10px 20px;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .text {
+        width: 75%;
+        float: right;
+      }
+      .item {
+        border: 2px solid #000000;
+        border-radius: 5px;
+        margin: 0 10px 10px 10px;
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+        width: calc(33.33% - 20px);
+        box-sizing: border-box;
+      }
+      footer {
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 10px 20px;
+        margin-top: auto; /* Push the footer to the bottom */
+      }
+      ul {
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="IMGS/citylogo.png" />
+      <h1>State Name</h1>
+    </header>
+    <nav>
+      <a href="Index.html">Home</a>
+      <a href="AboutUs.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <main>
+      <section>
+        <h2>The City of Williamston is seeking a contract Assessor</h2>
+        <p><a href="../Assessor_Pages/ContractAcessor_Additional.html">Proposal for Assessor.April 2024 City of Williamston</a></p>
+       
+      <section>
+        <a href="FAQs.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+            "
+          >
+            Assessor FAQs
+          </div>
+        </a>
+        <a href="Principal_Resident_Exemption.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+            "
+          >
+            Principal Resident Exemption
+          </div>
+        </a>
+        <a href="Board_of_Review.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+            "
+          >
+            Board of Review
+          </div>
+        </a>
+        <a href="Contract_Accessor.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+            "
+          >
+            Seeking to Contract Accessor
+          </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 State Name. All rights reserved.</p>
+    </footer>
+    <script>
+      /* Toggle between hiding and showing the dropdown content */
+      function toggleDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        } else {
+          // Hide all other dropdowns before showing this one
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].classList.remove("show");
+          }
+          dropdown.classList.add("show");
+        }
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var dropdown = dropdowns[i];
+            if (dropdown.classList.contains("show")) {
+              dropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

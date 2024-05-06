@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - State Website</title>
+    <style>
+      /* Your CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px; /* Optional: rounded corners */
+      }
+      nav {
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 10px 20px;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .text {
+        width: 75%;
+        float: right;
+      }
+      .item {
+        border: 2px solid #000000;
+        border-radius: 5px;
+        margin: 0 10px 10px 10px;
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+        width: calc(33.33% - 20px);
+        box-sizing: border-box;
+      }
+      footer {
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 10px 20px;
+        margin-top: auto; /* Push the footer to the bottom */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="IMGS/citylogo.png" />
+      <h1>State Name</h1>
+    </header>
+    <nav>
+      <a href="Index.html">Home</a>
+      <a href="AboutUs.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <main>
+      <section>
+        <h2>Deadlines for application submission</h2>
+        <a
+          href="../Department_Files/City-of-Williamston-Master-Plan-2015.pdf"
+          target="_blank"
+        >
+          Master Plan 2015</a
+        >
+        <p>Posted on April 4, 2024</p>
+        <a
+          href="../Department_Files/City-of-Williamston-Master-Plan-2015.pdf"
+          download
+        >
+          <button>Download PDF</button> <br />
+          <br />
+        </a>
+        <a
+          href="../Department_Files/2024-PC-Deadlines-Website.pdf"
+          target="_blank"
+        >
+          Planning Commission application deadlines</a
+        >
+        <p>Posted on February 2, 2024</p>
+        <a href="../Department_Files/2024-PC-Deadlines-Website.pdf" download>
+          <button>Download PDF</button> <br />
+          <br />
+        </a>
+        <a
+          href="../Department_Files/2024-ZBA-Deadlines-Website.pdf"
+          target="_blank"
+        >
+          Zoning Board of Appeals application deadlines</a
+        >
+        <p>Posted on February 8, 2024</p>
+        <a href="../Department_Files/2024-ZBA-Deadlines-Website.pdf" download>
+          <button>Download PDF</button> <br />
+          <br />
+        </a>
+      </section>
+      <section>
+        <a href="Zoning_Map.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+              text-align: left;
+            "
+          >
+            Zoning Map
+          </div>
+        </a>
+        <a href="Zoning_Ordinance.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+              text-align: left;
+            "
+          >
+            Zoning Ordinance
+          </div>
+        </a>
+        <a href="General_Code.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+              text-align: left;
+            "
+          >
+            General Code
+          </div>
+        </a>
+        <a href="DeadLines.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+              text-align: left;
+            "
+          >
+            Deadlines for application submission
+          </div>
+        </a>
+        <a href="Permits.html">
+          <div
+            style="
+              border: 2px solid #000000;
+              padding: 10px;
+              border-radius: 0;
+              background-color: #f4f4f4;
+              width: 200px;
+              text-align: left;
+            "
+          >
+            Permits
+          </div>
+        </a>
+
+        <footer>
+          <p>&copy; 2024 State Name. All rights reserved.</p>
+        </footer>
+        <script>
+          /* Toggle between hiding and showing the dropdown content */
+          function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            if (dropdown.classList.contains("show")) {
+              dropdown.classList.remove("show");
+            } else {
+              // Hide all other dropdowns before showing this one
+              var dropdowns =
+                document.getElementsByClassName("dropdown-content");
+              for (var i = 0; i < dropdowns.length; i++) {
+                dropdowns[i].classList.remove("show");
+              }
+              dropdown.classList.add("show");
+            }
+          }
+
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function (e) {
+            if (!e.target.matches(".dropbtn")) {
+              var dropdowns =
+                document.getElementsByClassName("dropdown-content");
+              for (var i = 0; i < dropdowns.length; i++) {
+                var dropdown = dropdowns[i];
+                if (dropdown.classList.contains("show")) {
+                  dropdown.classList.remove("show");
+                }
+              }
+            }
+          };
+        </script>
+      </section>
+    </main>
+  </body>
+</html>
