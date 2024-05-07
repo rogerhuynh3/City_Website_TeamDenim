@@ -1,1 +1,40 @@
+/* CSS for the tab bar */
+.tab {
+    display: flex;
+    justify-content: center;
+    background-color: #910031;
+    padding: 10px;
+}
 
+/* Style the tab links */
+.tab a {
+    color: black; /* Change text color to black */
+    background-color: #ddd; /* Change background color to light gray */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    margin-right: 10px;
+}
+
+/* Change background color of tabs on hover */
+.tab a:hover {
+    background-color: #ffffff; /* Change background color to dark gray on hover */
+}
+
+/* Create an active/current tablink class */
+.tab a.active {
+    background-color: #910031; /* Change background color to black for active tab */
+    color: white; /* Change text color to white for active tab */
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #f9f9f9;
+}
