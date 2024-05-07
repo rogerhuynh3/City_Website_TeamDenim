@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html"/>
-    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+    <link rel="stylesheet" href="../../NAV-BAR (header)/navbar.css"/>
+    <link rel="stylesheet" href="../../NAV-BAR (header)/navbar.css"/>
     <style>
       /* Your CSS styles here */
       body {
@@ -35,13 +35,6 @@
         width: calc(33.33% - 20px);
         box-sizing: border-box;
       }
-      footer {
-        background-color: #444;
-        color: #fff;
-        text-align: center;
-        padding: 10px 20px;
-        margin-top: auto; /* Push the footer to the bottom */
-      }
       ul {
         list-style-type: none;
         margin: 10px;
@@ -54,7 +47,7 @@
     <div id="navbar-container"></div>
     <script>
         // Fetch and include nav-bar.html using JavaScript
-        fetch('../NAV-BAR (header)/nav-bar.html')
+        fetch('../../NAV-BAR (header)/nav-bar.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('navbar-container').innerHTML = html;
