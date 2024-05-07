@@ -58,15 +58,31 @@
         cursor: pointer;
         text-decoration: none;
         color: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
       }
       .event:hover {
         color: #3d5a80;
       }
       .event h2 {
         margin-top: 0;
+        flex-basis: 100%;
       }
       .event p {
         margin-bottom: 0;
+        flex-basis: 100%;
+      }
+      .additional-notes {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        flex-basis: 100%;
+      }
+      .additional-notes p {
+        margin: 0;
       }
     </style>
   </head>
@@ -90,7 +106,6 @@
         </div>
       </header>
     </div>
-
     <main>
       <div class="sidebar">
         <h2>Filters</h2>
@@ -115,28 +130,60 @@
       </div>
       <div class="events-container" id="events-container">
         <a href="Event_one.html" class="event" data-date="2024-05-10">
-          <h2>Planning Commission Meeting</h2>
-          <p>Date: May 7, 2024</p>
-          <p>Time: 7:00 PM - 8:00 PM</p>
-          <p>Williamston City Hall</p>
+          <div class="event-details">
+            <h2>Planning Commission Meeting</h2>
+            <p>Date: May 7, 2024</p>
+            <p>Time: 7:00 PM - 8:00 PM</p>
+            <p>Location: Williamston City Hall</p>
+          </div>
+          <div class="additional-notes">
+            <h3>Additional Notes:</h3>
+            <div class="notes">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
         </a>
         <a href="Event_two.html" class="event" data-date="2024-05-13">
-          <h2>City Council second Monday meeting</h2>
-          <p>Date: May 13, 2024</p>
-          <p>Time: 7:00 PM - 8:00 PM</p>
-          <p>Williamston City Hall</p>
+          <div class="event-details">
+            <h2>City Council second Monday meeting</h2>
+            <p>Date: May 13, 2024</p>
+            <p>Time: 7:00 PM - 8:00 PM</p>
+            <p>Location: Williamston City Hall</p>
+          </div>
+          <div class="additional-notes">
+            <h3>Additional Notes:</h3>
+            <div class="notes">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
         </a>
         <a href="Event_three.html" class="event" data-date="2024-05-14">
-          <h2>ZBA meeting</h2>
-          <p>Date: May 14, 2024</p>
-          <p>Time: 7:00 PM - 8:00 PM</p>
-          <p>Williamston City Hall</p>
+          <div class="event-details">
+            <h2>ZBA meeting</h2>
+            <p>Date: May 14, 2024</p>
+            <p>Time: 7:00 PM - 8:00 PM</p>
+            <p>Location: Williamston City Hall</p>
+          </div>
+          <div class="additional-notes">
+            <h3>Additional Notes:</h3>
+            <div class="notes">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
         </a>
         <a href="Event_four.html" class="event" data-date="2024-05-16">
-          <h2>Parks and Recreation Commission meeting</h2>
-          <p>Date: May 16, 2024</p>
-          <p>Time: 6:00 PM - 7:00 PM</p>
-          <p>Williamston City Hall</p>
+          <div class="event-details">
+            <h2>Parks and Recreation Commission meeting</h2>
+            <p>Date: May 16, 2024</p>
+            <p>Time: 6:00 PM - 7:00 PM</p>
+            <p>Location: Williamston City Hall</p>
+          </div>
+          <div class="additional-notes">
+            <h3>Additional Notes:</h3>
+            <div class="notes">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
         </a>
       </div>
     </main>
@@ -156,6 +203,7 @@
 
         events.forEach((event) => {
           const eventName = event
+            .getElementsByClassName("event-details")[0]
             .getElementsByTagName("h2")[0]
             .innerText.toLowerCase();
           const eventDay = new Date(event.getAttribute("data-date"))
@@ -165,7 +213,7 @@
           const matchesSearch = eventName.includes(searchInput);
           const matchesDay = dayFilter === "all" || eventDay === dayFilter;
 
-          event.style.display = matchesSearch && matchesDay ? "block" : "none";
+          event.style.display = matchesSearch && matchesDay ? "flex" : "none";
         });
       }
 
