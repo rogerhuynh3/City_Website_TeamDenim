@@ -1,67 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html"/>
-        <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
-        <link rel="stylesheet" href="../Contact Page/contact.css"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"/>
-        <title>Contact Us</title>
-    </head>
-    <body>
-        <div id="navbar-container"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html" />
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css" />
+    <link rel="stylesheet" href="../Contact Page/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+    />
+    <title>Contact Us</title>
+    <style>
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
     <script>
-        // Fetch and include nav-bar.html using JavaScript
-        fetch('../NAV-BAR (header)/nav-bar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error fetching nav-bar.html:', error);
-            });
+      // Fetch and include nav-bar.html using JavaScript
+      fetch("../NAV-BAR (header)/nav-bar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navbar-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error fetching nav-bar.html:", error);
+        });
     </script>
 
     <div class="subpage-header">
-        <h2>Contact</h2>
-   </div>
-   
-    <div class="message-container">
+      <h2>Contact</h2>
     </div>
-        <div class="send-message-info">
-            <h1 class="message-title">SEND US A MESSAGE</h1>
-            <form id="send_message">
-                <label class="enter">ENTER YOUR NAME</label>
-                <label for="first_name" id="first_name-label">
-                    <input id="first_name" type="text" placeholder="FIRST NAME" required/>
-                </label>
-            <label for="last_name" id="last_name-label">
-                <input id="last_name" type="text" placeholder="LAST NAME" required/>
-            </label>
-            <br>
-            <label class="enter">ENTER YOUR EMAIL</label>
-            <label for="email" id="email-label">
-                <input id="email" type="email" placeholder="johnsmith08@gmail.com" required/>
-            </label>
-            <br>
-                <label class="enter">ENTER YOUR MESSAGE</label>
-                <label for="message">
-                    <textarea id="message" name="message" rows="3" cols="30" placeholder="When is the banquet?"></textarea>
-                    <br>
-                    <input id="submit" type="submit" value="SUBMIT"/>
-                </label>
-            </form>
-        </div>        
-        <br><br>
-        <div class="contact_info">
-            <h1 class="contactus-title">CONTACT US</h1>
-            <h2>Phone: (517) 655-2774 <br> 
-                FAX: (517) 655-2797 <br>
-                Address: 161 East Grand River Avenue Williamston, MI 48895 <br>
-                Hours: Monday-Friday: 8:00am - 5:00pm Saturday-Sunday: Closed
-            </h2>
-        </div>
-    </body>
+
+    <div class="message-container"></div>
+    <div class="send-message-info">
+      <h1 class="message-title">SEND US A MESSAGE</h1>
+      <form id="send_message">
+        <label class="enter">ENTER YOUR NAME</label>
+        <label for="first_name" id="first_name-label">
+          <input
+            id="first_name"
+            type="text"
+            placeholder="FIRST NAME"
+            required
+          />
+        </label>
+        <label for="last_name" id="last_name-label">
+          <input id="last_name" type="text" placeholder="LAST NAME" required />
+        </label>
+        <br />
+        <label class="enter">ENTER YOUR EMAIL</label>
+        <label for="email" id="email-label">
+          <input
+            id="email"
+            type="email"
+            placeholder="johnsmith08@gmail.com"
+            required
+          />
+        </label>
+        <br />
+        <label class="enter">ENTER YOUR MESSAGE</label>
+        <label for="message">
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            cols="30"
+            placeholder="When is the banquet?"
+          ></textarea>
+          <br />
+          <input id="submit" type="submit" value="SUBMIT" />
+        </label>
+      </form>
+    </div>
+    <br /><br />
+    <div class="contact_info">
+      <h1 class="contactus-title">CONTACT US</h1>
+      <h2>
+        Phone: (517) 655-2774 <br />
+        FAX: (517) 655-2797 <br />
+        Address: 161 East Grand River Avenue Williamston, MI 48895 <br />
+        Hours: Monday-Friday: 8:00am - 5:00pm Saturday-Sunday: Closed
+      </h2>
+    </div>
+    <footer id="footer">
+      <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
