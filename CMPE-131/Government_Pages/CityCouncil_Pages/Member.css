@@ -1,1 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: rounded corners */
+  }
+  nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .item {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin: 0 10px 10px 10px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+  }
+  .text {
+    font-size: 1.2em;
+    color: #333; /* Set text color */
+  }
+  footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th,
+  td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse; /* Change direction to reverse */
+  }
 
+  .parent > * {
+    flex: 1 1 45%; /* Adjust the width as needed */
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .parent {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .parent > * {
+      width: 100%;
+    }
+  }
