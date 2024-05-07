@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CMPE-131/NAV-BAR (header)/gov-nav.html" />
     <link rel="stylesheet" href="../CMPE-131/NAV-BAR (header)/navbar.css" />
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <style>
-      /* Your CSS styles here */
-      body {
-        font-family: Arial, sans-serif;
+         body {
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
@@ -35,11 +34,24 @@
           33.33% - 20px
         ); /* Adjust width based on the number of items per row */
         box-sizing: border-box; /* Include padding and border in the width calculation */
+        background-color: #910031;
       }
       .text {
         font-size: 1.2em;
-        color: #333; /* Set text color */
+        color: #ffffff; /* Set text color */
       }
+      a{
+        text-decoration: none;
+      }
+      .text:hover {
+        color: #7d8491;
+      }
+      h2 {
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
       footer {
         background-color: #333;
         color: white;
@@ -67,7 +79,7 @@
     <main>
       <section>
         <div class="subpage-header">
-          <h2>Government Services</h2>
+          <h1>Government Services</h2>
           <p>Government related services, information, authorites, etc.</p>
         </div>
 
@@ -75,7 +87,7 @@
         <div class="container">
           <div class="item">
             <a href="Government_Pages/City_Council.html">
-              <img src="IMGS/citylogo.png" alt="Image 1" />
+              <i class="fa-solid fa-city"></i>
               <div class="text">City Council</div>
             </a>
           </div>
