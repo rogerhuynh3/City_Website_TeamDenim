@@ -7,24 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - State Website</title>
     <link rel="stylesheet" href="serviceStyle.css">
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+
 </head>
 
 <body>
-    <header>
-        <img src="IMGS/citylogo.png">`
-        <h1>State Name</h1>
-    </header>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../About.html">About</a>
-        <a href="../Services.html">Services</a>
-        <a href="../Contact.html">Contact</a>
-        <a href="../Government.html">Government</a>
-    </nav>
+    <div id="navbar-container"></div>
     <main>
         <section>
-            <h2>Services</h2>
-            <a href="../Services.html">Select Category</a>
+            <div class="subpage-header">
+                <h2>Services</h2>
+                <p>Government provided services for the citizens of Williamston, MI</p>
+            </div>
+
+            <div class="select-Category">
+                <a href="../Services.html">ㅁSelect Category</a>
+            </div>
 
             <div class = "container">
                 <div class = "item">
@@ -117,6 +115,29 @@
     <footer>
         <p>&copy; 2024 State Name. All rights reserved.</p>
     </footer>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
+    <script>
+        // Fetch and include gov-nav.html using JavaScript
+        fetch('../CMPE-131/NAV-BAR (header)/gov-nav.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the fetched content to the body
+                document.body.innerHTML += html;
+            })
+            .catch(error => {
+                console.error('Error fetching gov-nav.html:', error);
+            });
+    </script>
 </body>
 
 </html>
