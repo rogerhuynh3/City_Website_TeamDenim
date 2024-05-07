@@ -30,7 +30,7 @@
         flex: 1; /* Grow to fill remaining space */
         padding: 20px;
         min-height: calc(100vh - 60px); /* Footer height + padding */
-        box-sizing: border-box
+        box-sizing: border-box;
       }
       footer {
         background-color: #333;
@@ -41,7 +41,7 @@
         width: 100%;
       }
     </style>
-
+  </head>
   <body>
     <div id="navbar-container"></div>
     <script>
@@ -64,21 +64,23 @@
     </div>
 
     <main>
-      <div class="announcement">
-        <h2>This Week's Announcements:</h2>
-        <p>Event info goes here</p>
-      </div>
+      <div class="announcement-event_block">
+        <div class="announcements">
+          <h2>This Week's Announcements:</h2>
+          <p>Event info goes here</p>
+        </div>
 
-      <div class="current-events">
-        <h2>Current Events</h2>
-        <nav>
-          <ol>
-            <li><a href="#">Event 1</a></li>
-            <li><a href="#">Event 2</a></li>
-            <li><a href="#">Event 3</a></li>
-            <li><a href="#">Event 4</a></li>
-          </ol>
-        </nav>
+        <div class="announcements">
+          <h2>Current Events</h2>
+          <nav>
+            <ol>
+              <li><a href="#">Event 1</a></li>
+              <li><a href="#">Event 2</a></li>
+              <li><a href="#">Event 3</a></li>
+              <li><a href="#">Event 4</a></li>
+            </ol>
+          </nav>
+        </div>
       </div>
 
       <div class="article">
@@ -215,17 +217,9 @@
           <br />Address: <br />Social Media:
         </p>
       </div>
-
-      <div class="contact-info">
-        <h2 id="Contact">Contact Information</h2>
-        <p>
-          <strong>Contact With Us</strong> <br />Phone Number: <br />Email:
-          <br />Address: <br />Social Media:
-        </p>
-      </div>
     </main>
-    <footer>
-      <p>&copy; 2024 State Name. All Rights Reserved.</p>
+    <footer id="footer">
+      <p>&copy; 2024 Your Website Name. All rights reserved.</p>
     </footer>
     <script>
       /* Toggle between hiding and showing the dropdown content */
