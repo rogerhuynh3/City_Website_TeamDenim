@@ -12,7 +12,7 @@ body {
 nav {
     background-color: #910031;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between; /* Align logo and nav links to start and end */
     align-items: center; /* Center vertically */
@@ -42,4 +42,11 @@ nav {
     text-decoration: none;
 }
 
+.subpage-header {
+    background-color: #3d5a80;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 20px;
 
+}
