@@ -23,6 +23,9 @@
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
+            width: 90%; /* Adjust width of the container */
+            max-width: 1400px; /* Optional: set a maximum width */
+            margin: 0 auto; /* Center the container horizontally */
         }
 
         /* Style the image and text container */
@@ -30,11 +33,11 @@
             border: 2px solid #bdb9b9; /* Border style and color */
             border-radius: 5px; /* Optional: rounded corners */
             margin: 0 10px 10px 10px; /* Optional margin around images */
-            padding: 10px; /* Optional padding inside the container */
+            padding: 25px; /* Optional padding inside the container */
             text-align: center; /* Left align the text */
             display: inline-block;
             vertical-align: top; /* Align items to the top */
-            width: calc(100% - 5px); /* Adjust width based on the number of items per row */
+            width: calc(100% - 1px); /* Adjust width based on the number of items per row */
             box-sizing: border-box; /* Include padding and border in the width calculation */
         }
 
@@ -43,7 +46,7 @@
             border-radius: 5px; /* Optional: rounded corners */
             margin: 0 10px 10px 10px; /* Optional margin around images */
             padding: 10px; /* Optional padding inside the container */
-            text-align: left; /* Left align the text */
+            text-align: center; /* Left align the text */
             display: inline-block;
             vertical-align: top; /* Align items to the top */
             width: calc(20% - 5px); /* Adjust width based on the number of items per row */
@@ -51,7 +54,7 @@
         }
 
         .items:hover{
-            color: black;
+            color: rgb(190, 24, 24);
         }
 
         /* Style the text */
@@ -60,7 +63,7 @@
             color: #333; /* Set text color */
             margin-bottom: 5px; /* Optional margin below the text */
             font-weight: bold;
-            text-align: middle;
+            text-align: left;
         }
 
         /* Style the links */
@@ -95,10 +98,18 @@
             padding: 5px 5px 5px 0.5em;
             color: #4981b6;
             text-decoration: none;
+            text-align: left;
         }
 
         .service-list li a:hover {
             color: #3d5dc2;
+        }
+
+        img{
+            width: 50px;
+            margin-left: 20%;
+            margin-right: 80%;
+            padding-bottom: 5%;
         }
     </style>
 </head>
@@ -127,7 +138,8 @@
             <div class="container">
                 <div class="item">
                 <div class="items">
-                        <!-- <img src="IMGS/citylogo.png" alt="Image 1"> -->
+                        <img src="IMGS/ServiceFiles/Service_logo.png" alt="Image 1">
+                        
                         <div class="text">Services & Safety</div>
                         <ul class="service-list">
                             <li><a href="Service_Pages/Sewer_And_Water.html">Water and sewer</a></li>
@@ -137,7 +149,7 @@
                 </div>
 
                 <div class="items">
-                        <!-- <img src="IMGS/citylogo.png" alt="Image 2"> -->
+                        <img src="IMGS/ServiceFiles/Payment.png" alt="Image 2">
                         <div class="text">Payments & Taxes</div>
                         <ul class="service-list">
                             <li><a href="Service_Pages/Pay_Water.html">Pay water bill</a></li>
@@ -147,7 +159,7 @@
                 </div>
 
                 <div class="items">
-                        <!-- <img src="IMGS/citylogo.png" alt="Image 3"> -->
+                        <img src="IMGS/ServiceFiles/Jobs.png" alt="Image 3">
                         <div class="text">Jobs</div>
                         <ul class="service-list">
                             <li><a href="Service_Pages/Jobs.html">Job Oppurtunites</a></li>
@@ -155,7 +167,7 @@
                 </div>
 
                 <div class="items">
-                        <!-- <img src="IMGS/citylogo.png" alt="Image 3"> -->
+                        <img src="IMGS/ServiceFiles/PWS.png" alt="Image 3">
                         <div class="text">Public Work Services</div>
                         <ul class="service-list">
                             <li><a href="Service_Pages/Limb_And_Branch.html">Limb and branch clean up</a></li>
@@ -166,7 +178,7 @@
                 </div>
 
                 <div class="items">
-                        <!-- <img src="IMGS/citylogo.png" alt="Image 3"> -->
+                        <img src="IMGS/ServiceFiles/Clerk.png" alt="Image 3">
                         <div class="text">Clerk</div>
                         <ul class="service-list">
                             <li><a href="Service_Pages/Elections.html">Elections</a></li>
@@ -175,7 +187,7 @@
                 </div>
 
                 <div class="items">
-                        <!-- <img src="IMGS/citylogo.png" alt="Image 3"> -->
+                        <img src="IMGS/ServiceFiles/Businesses.png" alt="Image 3">
                         <div class="text">Businesses</div>
                         <ul class="service-list">
                             <li><a href="Service_Pages/Local_Businesses.html">Local businesses</a></li>
@@ -184,7 +196,7 @@
                 </div>
 
                 <div class="items">
-                        <!-- <img src="IMGS/citylogo.png" alt="Image 3"> -->
+                        <img src="IMGS/ServiceFiles/PAL.png" alt="Image 3">
                         <div class="text">Permits and Licensing</div>
                         <ul class="service-list">
                             <li><a href="Service_Pages/Building_Permits.html">Building permits</a></li>
@@ -193,7 +205,7 @@
                 </div>
 
                 <div class="items">
-                        <!-- <img src="IMGS/citylogo.png" alt="Image 3"> -->
+                        <img src="IMGS/ServiceFiles/PAR.png" alt="Image 3">
                         <div class="text">Recreation & Culture</div>
                         <ul class="service-list">
                             <li><a href="Service_Pages/Parks_and_Recreation.html">Parks and recreation</a></li>
@@ -204,7 +216,7 @@
                 </div>
 
                 <div class="items">
-                    <!-- <img src="IMGS/citylogo.png" alt="Image 3"> -->
+                    <img src="IMGS/ServiceFiles/Payment.png" alt="Image 3">
                     <div class="text">Payment</div>
                     <ul class="service-list">
                         <li><a href="https://bsaonline.com/OnlinePayment/OnlinePaymentSearch?PaymentApplicationType=10&uid=590">Water and Sewer</a></li>
@@ -213,7 +225,7 @@
                 </div>
 
                <div class="items">
-                    <!-- <img src="IMGS/citylogo.png" alt="Image 3"> -->
+                    <img src="IMGS/ServiceFiles/REP.png" alt="Image 3">
                    <div class="text">Report an issue</div>
                   <ul class="service-list">
                       <li><a href="Service_Pages/Missed_Trash.html">Missed trash pickup</a></li>
