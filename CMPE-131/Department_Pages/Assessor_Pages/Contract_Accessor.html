@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - State Website</title>
+    <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html"/>
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
     <style>
       /* Your CSS styles here */
       body {
@@ -12,28 +13,6 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-      }
-      header {
-        background-color: #000000;
-        color: #ffffff;
-        padding: 10px 20px;
-        text-align: center;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px; /* Optional: rounded corners */
-      }
-      nav {
-        background-color: #444;
-        color: #fff;
-        text-align: center;
-        padding: 10px 20px;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 10px;
       }
       .container {
         display: flex;
@@ -72,16 +51,18 @@
   </head>
 
   <body>
-    <header>
-      <img src="IMGS/citylogo.png" />
-      <h1>State Name</h1>
-    </header>
-    <nav>
-      <a href="Index.html">Home</a>
-      <a href="AboutUs.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="Contact.html">Contact</a>
-    </nav>
+    <div id="navbar-container"></div>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
     <main>
       <section>
         <h2>The City of Williamston is seeking a contract Assessor</h2>
@@ -141,37 +122,5 @@
           </div>
       </section>
     </main>
-    <footer>
-      <p>&copy; 2024 State Name. All rights reserved.</p>
-    </footer>
-    <script>
-      /* Toggle between hiding and showing the dropdown content */
-      function toggleDropdown(dropdownId) {
-        var dropdown = document.getElementById(dropdownId);
-        if (dropdown.classList.contains("show")) {
-          dropdown.classList.remove("show");
-        } else {
-          // Hide all other dropdowns before showing this one
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          for (var i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].classList.remove("show");
-          }
-          dropdown.classList.add("show");
-        }
-      }
-
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (e) {
-        if (!e.target.matches(".dropbtn")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          for (var i = 0; i < dropdowns.length; i++) {
-            var dropdown = dropdowns[i];
-            if (dropdown.classList.contains("show")) {
-              dropdown.classList.remove("show");
-            }
-          }
-        }
-      };
-    </script>
   </body>
 </html>
