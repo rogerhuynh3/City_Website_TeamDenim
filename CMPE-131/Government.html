@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CMPE-131/NAV-BAR (header)/gov-nav.html"/>
+    <link rel="stylesheet" href="../CMPE-131/NAV-BAR (header)/navbar.css"/>
     <title>About Us - State Website</title>
     <style>
         /* Your CSS styles here */
@@ -68,16 +70,18 @@
   </head>
 
 <body>
-    <header>
-        <img src="IMGS/citylogo.png">`
-        <h1>State Name</h1>
-    </header>
-    <nav>
-        <a href="Index.html">Home</a>
-        <a href="AboutUs.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="Contact.html">Contact</a>
-    </nav>
+    <div id="navbar-container"></div>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../CMPE-131/NAV-BAR (header)/gov-nav.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
     <main>
         <section>
             <h2>Government Services</h2>
