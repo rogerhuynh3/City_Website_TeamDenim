@@ -15,7 +15,8 @@
 /* Form styles */
 .send-message-info {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
+    padding: 20px;
 }
 
 .message-title {
