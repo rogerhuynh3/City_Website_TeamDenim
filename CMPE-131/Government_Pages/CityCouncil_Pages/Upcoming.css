@@ -1,1 +1,89 @@
+/* Your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: rounded corners */
+}
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.centered {
+    text-align: center;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.section-item1 {
+
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 0;
+    background-color: #f4f4f4;
+    width: 200px;
+    
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse; /* Change direction to reverse */
+    margin: 5px;
+ 
+
+  }
+
+  .parent > * {
+    flex: 1 1 45%; /* Adjust the width as needed */
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .parent {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .parent > * {
+      width: 100%;
+    }
+  }
+  footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: auto; /* Push the footer to the bottom */
+}
 
