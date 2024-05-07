@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html" />
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>State Website</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Use full viewport height */
+      }
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      main {
+        display: flex;
+        flex: 1; /* Grow to fill remaining space */
+        padding: 20px;
+        min-height: calc(100vh - 60px); /* Footer height + padding */
+        box-sizing: border-box;
+      }
+      .sidebar {
+        flex: 0 0 200px; /* Fixed width sidebar */
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      .events-container {
+        flex: 1; /* Grow to fill remaining space */
+        padding: 0 20px;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        bottom: 0;
+        width: 100%;
+      }
+      .event {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        cursor: pointer;
+      }
+      .event h2 {
+        margin-top: 0;
+      }
+      .event p {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <script>
+      // Fetch and include nav-bar.html using JavaScript
+      fetch("../NAV-BAR (header)/nav-bar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navbar-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error fetching nav-bar.html:", error);
+        });
+    </script>
+    <div class="opening-image">
+      <header>
+        <div class="opening-text">
+          <h1>Welcome to the City of Williamston!</h1>
+        </div>
+      </header>
+    </div>
+
+    <main>
+      <div class="sidebar">
+        <h2>Filters</h2>
+        <label for="search">Search:</label>
+        <input type="text" id="search" oninput="filterEvents()" />
+        <h3>Filter by Day</h3>
+        <select id="day-filter" onchange="filterEvents()">
+          <option value="all">All Days</option>
+          <option value="1">Monday</option>
+          <option value="2">Tuesday</option>
+          <option value="3">Wednesday</option>
+          <option value="4">Thursday</option>
+          <option value="5">Friday</option>
+          <option value="6">Saturday</option>
+          <option value="0">Sunday</option>
+        </select>
+        <h3>Sort by Date</h3>
+        <select id="date-sort" onchange="sortEvents()">
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+      </div>
+      <div class="events-container" id="events-container">
+        <a href="Event_one.html" class="event" data-date="2024-05-10">
+          <h2>Planning Commission Meeting</h2>
+          <p>Date: May 7, 2024</p>
+          <p>Time: 7:00 PM - 8:00 PM</p>
+          <p>Williamston City Hall</p>
+        </a>
+        <a href="Event_two.html" class="event" data-date="2024-05-13">
+          <h2>City Council second Monday meeting</h2>
+          <p>Date: May 13, 2024</p>
+          <p>Time: 7:00 PM - 8:00 PM</p>
+          <p>Williamston City Hall</p>
+        </a>
+        <a href="Event_three.html" class="event" data-date="2024-05-14">
+          <h2>ZBA meeting</h2>
+          <p>Date: May 14, 2024</p>
+          <p>Time: 7:00 PM - 8:00 PM</p>
+          <p>Williamston City Hall</p>
+        </a>
+        <a href="Event_four.html" class="event" data-date="2024-05-16">
+          <h2>Parks and Recreation Commission meeting</h2>
+          <p>Date: May 16, 2024</p>
+          <p>Time: 6:00 PM - 7:00 PM</p>
+          <p>Williamston City Hall</p>
+        </a>
+      </div>
+    </main>
+    <footer id="footer">
+      <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+    <script>
+      // Get all events
+      const events = Array.from(document.getElementsByClassName("event"));
+
+      // Filter events based on search input and day filter
+      function filterEvents() {
+        const searchInput = document
+          .getElementById("search")
+          .value.toLowerCase();
+        const dayFilter = document.getElementById("day-filter").value;
+
+        events.forEach((event) => {
+          const eventName = event
+            .getElementsByTagName("h2")[0]
+            .innerText.toLowerCase();
+          const eventDay = new Date(event.getAttribute("data-date"))
+            .getDay()
+            .toString();
+
+          const matchesSearch = eventName.includes(searchInput);
+          const matchesDay = dayFilter === "all" || eventDay === dayFilter;
+
+          event.style.display = matchesSearch && matchesDay ? "block" : "none";
+        });
+      }
+
+      // Sort events based on date
+      function sortEvents() {
+        const dateSort = document.getElementById("date-sort").value;
+
+        events.sort((a, b) => {
+          const dateA = new Date(a.getAttribute("data-date"));
+          const dateB = new Date(b.getAttribute("data-date"));
+
+          return dateSort === "asc" ? dateA - dateB : dateB - dateA;
+        });
+
+        events.forEach((event) => {
+          document.getElementById("events-container").appendChild(event);
+        });
+      }
+
+      // Initial filtering and sorting
+      filterEvents();
+      sortEvents();
+    </script>
+  </body>
+</html>

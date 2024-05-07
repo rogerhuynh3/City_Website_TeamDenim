@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CMPE-131/NAV-BAR (header)/gov-nav.html"/>
-    <link rel="stylesheet" href="../CMPE-131/NAV-BAR (header)/navbar.css"/>
-    <title>About Us - State Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CMPE-131/NAV-BAR (header)/gov-nav.html" />
+    <link rel="stylesheet" href="../CMPE-131/NAV-BAR (header)/navbar.css" />
     <style>
-        /* Your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header { 
-            background-color: #000000;
-            color: #ffffff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px; /* Optional: rounded corners */
-        }
-    
-        /* Center the text */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
+      /* Your CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      /* Center the text */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
 
       /* Style the image and text container */
       .item {
@@ -50,155 +36,161 @@
         ); /* Adjust width based on the number of items per row */
         box-sizing: border-box; /* Include padding and border in the width calculation */
       }
-
-      /* Style the text */
       .text {
         font-size: 1.2em;
         color: #333; /* Set text color */
       }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        bottom: 0;
+        width: 100%;
+      }
     </style>
   </head>
 
-<body>
+  <body>
     <div id="navbar-container"></div>
     <script>
-        // Fetch and include nav-bar.html using JavaScript
-        fetch('../CMPE-131/NAV-BAR (header)/gov-nav.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error fetching nav-bar.html:', error);
-            });
+      // Fetch and include nav-bar.html using JavaScript
+      fetch("../CMPE-131/NAV-BAR (header)/gov-nav.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navbar-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error fetching nav-bar.html:", error);
+        });
     </script>
     <main>
-        <section>
-            <h2>Government Services</h2>
-            <div class="container">
-                <div class="item">
-                    <a href="Government_Pages/City_Council.html">
-                        <img src="IMGS/citylogo.png" alt="Image 1">
-                        <div class="text">City Council</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Index.html">
-                        <img src="IMGS/citylogo.png" alt="Image 2">
-                        <div class="text">Planning Commission</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Index.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Zoning Board of Appeals</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Index.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Parks and Recreation Commission</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Index.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Downtown Development Authority</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Index.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">TIFA/EDC</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>Departments</h2>
-            <div class="container">
-                <div class="item">
-                    <a href="Department_Pages/Assessor.html">
-                        <img src="IMGS/citylogo.png" alt="Image 1">
-                        <div class="text">Assessor</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Department_Pages/Building_Department.html">
-                        <img src="IMGS/citylogo.png" alt="Image 2">
-                        <div class="text">Building Department</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Department_Pages/City_Clerk.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">City Clerk</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Department_Pages/City_Manager.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">City Manager</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://www.cadl.org/about/our-locations/williamston">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">District Library</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://niesa.org/">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Fire Department</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Department_Pages/Planning_and_Zoning.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Planning and Zoning</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Department_Pages/Public_Works.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Public Works</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Department_Pages/Treasurer.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Treasurer</div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="Department_Pages/Water_and_Sewer.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Water and Sewer</div>
-                    </a> 
-                </div>
-                <div class="item">
-                    <a href="Department_Pages/Williamston_Police_Department.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">William Police Department</div>
-                    </a> 
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>Documents </h2>
-            <div class="container">
-                <div class="item">
-                    <a href="Index.html">
-                        <img src="IMGS/citylogo.png" alt="Image 3">
-                        <div class="text">Document Record</div>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section>
+        <h2>Government Services</h2>
+        <div class="container">
+          <div class="item">
+            <a href="Government_Pages/City_Council.html">
+              <img src="IMGS/citylogo.png" alt="Image 1" />
+              <div class="text">City Council</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Index.html">
+              <img src="IMGS/citylogo.png" alt="Image 2" />
+              <div class="text">Planning Commission</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Index.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Zoning Board of Appeals</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Index.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Parks and Recreation Commission</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Index.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Downtown Development Authority</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Index.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">TIFA/EDC</div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Departments</h2>
+        <div class="container">
+          <div class="item">
+            <a href="Department_Pages/Assessor.html">
+              <img src="IMGS/citylogo.png" alt="Image 1" />
+              <div class="text">Assessor</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Department_Pages/Building_Department.html">
+              <img src="IMGS/citylogo.png" alt="Image 2" />
+              <div class="text">Building Department</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Department_Pages/City_Clerk.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">City Clerk</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Department_Pages/City_Manager.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">City Manager</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.cadl.org/about/our-locations/williamston">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">District Library</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://niesa.org/">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Fire Department</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Department_Pages/Planning_and_Zoning.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Planning and Zoning</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Department_Pages/Public_Works.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Public Works</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Department_Pages/Treasurer.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Treasurer</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Department_Pages/Water_and_Sewer.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Water and Sewer</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="Department_Pages/Williamston_Police_Department.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">William Police Department</div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Documents</h2>
+        <div class="container">
+          <div class="item">
+            <a href="Index.html">
+              <img src="IMGS/citylogo.png" alt="Image 3" />
+              <div class="text">Document Record</div>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2024 State Name. All rights reserved.</p>
+    <footer id="footer">
+      <p>&copy; 2024 Your Website Name. All rights reserved.</p>
     </footer>
   </body>
 </html>
