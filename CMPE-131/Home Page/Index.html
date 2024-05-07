@@ -1,202 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html"/>
-    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
-    <link rel="stylesheet" href="index.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html" />
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+    />
     <title>State Website</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="navbar-container"></div>
     <script>
-        // Fetch and include nav-bar.html using JavaScript
-        fetch('../NAV-BAR (header)/nav-bar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error fetching nav-bar.html:', error);
-            });
+      // Fetch and include nav-bar.html using JavaScript
+      fetch("../NAV-BAR (header)/nav-bar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navbar-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error fetching nav-bar.html:", error);
+        });
     </script>
-   <div class="opening-image">
-    <header>
+    <div class="opening-image">
+      <header>
         <div class="opening-text">
-            <h1>Welcome to the City of Williamston!</h1>
+          <h1>Welcome to the City of Williamston!</h1>
         </div>
-    </header>
-   </div>
+      </header>
+    </div>
 
     <main>
-        <div class="announcement">
-            <h2>This Week's Announcements:</h2>
-            <p>Event info goes here</p>
+        <div class="announcement-event_block">
+            <div class="announcements">
+                <h2>This Week's Announcements:</h2>
+                <p>Event info goes here</p>
+              </div>
+        
+              <div class="announcements">
+                <h2>Current Events</h2>
+                <nav>
+                  <ol>
+                    <li><a href="#">Event 1</a></li>
+                    <li><a href="#">Event 2</a></li>
+                    <li><a href="#">Event 3</a></li>
+                    <li><a href="#">Event 4</a></li>
+                  </ol>
+                </nav>
+              </div>
         </div>
 
-        <div class="current-events">
-        <h2>Current Events</h2>
-            <nav>
-                <ol>
-                  <li><a href="#">Event 1</a></li>
-                  <li><a href="#">Event 2</a></li>
-                  <li><a href="#">Event 3</a></li>
-                  <li><a href="#">Event 4</a></li>
-                </ol>
-            </nav>
-        </div>
+      <div class="article">
+        <article>
+          <h2>Event 1</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
+            repellendus animi, ab voluptas consectetur deserunt eaque non
+            ducimus molestiae beatae quod quia dolorem repudiandae
+            exercitationem? Magni laudantium animi totam distinctio!
+          </p>
+          <a href="#">Click Here to Find out more</a>
+        </article>
+      </div>
 
-        <div class = "article">
-            <article>
-                <h2>Event 1</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati repellendus animi, ab voluptas consectetur deserunt 
-                eaque non ducimus molestiae beatae quod quia dolorem repudiandae exercitationem? Magni laudantium animi totam distinctio!</p>
-                <a href="#">Click Here to Find out more</a>
-            </article>
-        </div>
-
-        <h2>Services</h2>
-        <div class="serviceimg">
-            <div class="navbar">
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('services&SafetyDropdown')">Services & Safety
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="services&SafetyDropdown">
-                        <a href="#">Water and sewer</a>
-                        <a href="#">Sanitation</a>
-                        <a href="#">Police department</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('payments&TaxesDropdown')">Payments & Taxes
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="payments&TaxesDropdown">
-                        <a href="#">Pay water bill</a>
-                        <a href="#">Assessment</a>
-                        <a href="#">Property tax</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('jobsDropdown')">Jobs
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="jobsDropdown">
-                        <a href="#">Job Opportunities</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('publicWorkServicesDropdown')">Public Work Services
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="publicWorkServicesDropdown">
-                        <a href="#">Limb and branch clean up</a>
-                        <a href="#">Leaf clean up</a>
-                        <a href="#">Snow and ice removal</a>
-                        <a href="#">Hydrant flushing</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('clerkDropdown')">Clerk
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="clerkDropdown">
-                        <a href="#">Elections</a>
-                        <a href="#">Requst Record</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('businessesDropdown')">Businesses
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="businessesDropdown">
-                        <a href="#">Local businesses</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('permits&licensingDropdown')">Permits and Licensing
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="permits&licensingDropdown">
-                        <a href="#">Building permits</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('recreation&CultureDropdown')">Recreation & Culture
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="recreation&CultureDropdown">
-                        <a href="#">Parks and recreation</a>
-                        <a href="#">Parking permits</a>
-                        <a href="#">Festivals and events</a>
-                        <a href="#">Reservations</a>
-                    </div>
-                </div>
+      <h2>Services</h2>
+      <div class="serviceimg">
+        <div class="navbar">
+          <div class="dropdown">
+            <button
+              class="dropbtn"
+              onclick="toggleDropdown('services&SafetyDropdown')"
+            >
+              Services & Safety
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="services&SafetyDropdown">
+              <a href="#">Water and sewer</a>
+              <a href="#">Sanitation</a>
+              <a href="#">Police department</a>
             </div>
-        </div>
+          </div>
 
-        <div class="contact-info">
-            <h2 id="Contact">Contact Information</h2>
-            <p><strong>Contact With Us</strong>
-                <br>Phone Number: <br>Email:
-                <br>Address: <br>Social Media:
-            </p>
-        </div>
+          <div class="dropdown">
+            <button
+              class="dropbtn"
+              onclick="toggleDropdown('payments&TaxesDropdown')"
+            >
+              Payments & Taxes
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="payments&TaxesDropdown">
+              <a href="#">Pay water bill</a>
+              <a href="#">Assessment</a>
+              <a href="#">Property tax</a>
+            </div>
+          </div>
 
+          <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('jobsDropdown')">
+              Jobs
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="jobsDropdown">
+              <a href="#">Job Opportunities</a>
+            </div>
+          </div>
 
-        <div class ="contact-info">
-            <h2 id="Contact">Contact Information</h2>
-            <p><strong>Contact With Us</strong>
-            <br>Phone Number: <br>Email: 
-            <br>Address: <br>Social Media:</p>
+          <div class="dropdown">
+            <button
+              class="dropbtn"
+              onclick="toggleDropdown('publicWorkServicesDropdown')"
+            >
+              Public Work Services
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="publicWorkServicesDropdown">
+              <a href="#">Limb and branch clean up</a>
+              <a href="#">Leaf clean up</a>
+              <a href="#">Snow and ice removal</a>
+              <a href="#">Hydrant flushing</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown('clerkDropdown')">
+              Clerk
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="clerkDropdown">
+              <a href="#">Elections</a>
+              <a href="#">Requst Record</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="dropbtn"
+              onclick="toggleDropdown('businessesDropdown')"
+            >
+              Businesses
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="businessesDropdown">
+              <a href="#">Local businesses</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="dropbtn"
+              onclick="toggleDropdown('permits&licensingDropdown')"
+            >
+              Permits and Licensing
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="permits&licensingDropdown">
+              <a href="#">Building permits</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="dropbtn"
+              onclick="toggleDropdown('recreation&CultureDropdown')"
+            >
+              Recreation & Culture
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="recreation&CultureDropdown">
+              <a href="#">Parks and recreation</a>
+              <a href="#">Parking permits</a>
+              <a href="#">Festivals and events</a>
+              <a href="#">Reservations</a>
+            </div>
+          </div>
         </div>
-    
-    
-    
-    
+      </div>
+
+      <div class="contact-info">
+        <h2 id="Contact">Contact Information</h2>
+        <p>
+          <strong>Contact With Us</strong> <br />Phone Number: <br />Email:
+          <br />Address: <br />Social Media:
+        </p>
+      </div>
     </main>
-    <footer>
-        <p>&copy; 2024 State Name. All Rights Reserved.</p>
+    <footer id="footer">
+      <p>&copy; 2024 Your Website Name. All rights reserved.</p>
     </footer>
-        <script>
-        /* Toggle between hiding and showing the dropdown content */
-        function toggleDropdown(dropdownId) {
-            var dropdown = document.getElementById(dropdownId);
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-            } else {
-                // Hide all other dropdowns before showing this one
-                var dropdowns = document.getElementsByClassName('dropdown-content');
-                for (var i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].classList.remove('show');
-                }
-                dropdown.classList.add('show');
-            }
+    <script>
+      /* Toggle between hiding and showing the dropdown content */
+      function toggleDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        if (dropdown.classList.contains("show")) {
+          dropdown.classList.remove("show");
+        } else {
+          // Hide all other dropdowns before showing this one
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].classList.remove("show");
+          }
+          dropdown.classList.add("show");
         }
+      }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (e) {
-            if (!e.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName('dropdown-content');
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var dropdown = dropdowns[i];
-                    if (dropdown.classList.contains('show')) {
-                        dropdown.classList.remove('show');
-                    }
-                }
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var dropdown = dropdowns[i];
+            if (dropdown.classList.contains("show")) {
+              dropdown.classList.remove("show");
             }
+          }
         }
+      };
     </script>
-</body>
+  </body>
 </html>
