@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+=======
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../NAV-BAR (header)/nav-bar.html"/>
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+>>>>>>> d34ec13 (changes 6:38pm)
     <title>About Us - State Website</title>
     <style>
       /* Your CSS styles here */
@@ -66,17 +76,36 @@
     </style>
   </head>
 
+<<<<<<< HEAD
   <body>
+=======
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
+>>>>>>> d34ec13 (changes 6:38pm)
     <header>
       <img src="IMGS/citylogo.png" />
       <h1>State Name</h1>
     </header>
+<<<<<<< HEAD
     <nav>
       <a href="Index.html">Home</a>
       <a href="AboutUs.html">About</a>
       <a href="services.html">Services</a>
       <a href="Contact.html">Contact</a>
     </nav>
+=======
+>>>>>>> d34ec13 (changes 6:38pm)
     <main>
       <section>
         <h2>Assessor</h2>
