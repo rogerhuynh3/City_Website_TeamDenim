@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - State Website</title>
+    <link rel="stylesheet" href="serviceStyle.css">
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <main>
+        <section>
+            <div class="subpage-header">
+                <h2>Services</h2>
+                <p>Government provided services for the citizens of Williamston, MI</p>
+            </div>
+
+            <div class="select-Category">
+                <a href="../Services.html">ㅁSelect Category</a>
+            </div>
+
+            <div class = "container">
+                <div class = "item">
+                    <div class = "section">
+                        <div class = "header">
+                            <h3>When is leaf pick up?</h3>
+                        </div>
+
+                        <p>Leaf pickup occurs only in the Fall; there's no pickup in the Spring. Please refrain from bagging your leaves. Any updates to the pickup dates will be posted on the City website and Facebook page.</p>
+                        <p>For residents on Grand River Avenue, avoid placing leaves in the street; instead, rake them to the curb. In all other areas, leaves must be placed in the street for pickup; if they're not in the street, they won't be collected.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            </p>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 State Name. All rights reserved.</p>
+    </footer>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
+    <script>
+        // Fetch and include gov-nav.html using JavaScript
+        fetch('../CMPE-131/NAV-BAR (header)/gov-nav.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the fetched content to the body
+                document.body.innerHTML += html;
+            })
+            .catch(error => {
+                console.error('Error fetching gov-nav.html:', error);
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - State Website</title>
+    <link rel="stylesheet" href="serviceStyle.css">
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <main>
+        <section>
+            <div class="subpage-header">
+                <h2>Services</h2>
+                <p>Government provided services for the citizens of Williamston, MI</p>
+            </div>
+
+            <div class="select-Category">
+                <a href="../Services.html">ㅁSelect Category</a>
+            </div>
+
+            <div class = "container">
+                <div class = "item">
+                    <div class = "section">
+                        <div class = "header">
+                            <h3>Who is responsible for shoveling snow and ice off the sidewalks?</h3>
+
+                            <p>
+                                Property owners are responsible for clearing any ice and snow from the entire length of the sidewalk on their property, regardless of whether the property is unoccupied or has a building or structure on it.</p>
+                        </div>
+
+                    </div>
+
+                    <div class = "section">
+                        <div class = "header">
+                            <h3>By when do I need to clear my sidewalk of snow and ice?</h3>
+
+                            <p>Sidewalks must be cleared within 24 hours after snowfall stops if the accumulation is less than 4 inches. If the snow accumulation exceeds 4 inches, property owners have 48 hours to clear the sidewalks.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            </p>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 State Name. All rights reserved.</p>
+    </footer>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
+    <script>
+        // Fetch and include gov-nav.html using JavaScript
+        fetch('../CMPE-131/NAV-BAR (header)/gov-nav.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the fetched content to the body
+                document.body.innerHTML += html;
+            })
+            .catch(error => {
+                console.error('Error fetching gov-nav.html:', error);
+            });
+    </script>
+</body>
+
+</html>

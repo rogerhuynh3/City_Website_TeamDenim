@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - State Website</title>
+    <link rel="stylesheet" href="serviceStyle.css">
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <main>
+        <section>
+            <div class="subpage-header">
+                <h2>Services</h2>
+                <p>Government provided services for the citizens of Williamston, MI</p>
+            </div>
+
+            <div class="select-Category">
+                <a href="../Services.html">ㅁSelect Category</a>
+            </div>
+
+            <div class = "container">
+                <div class = "item">
+                    <div class = "section">
+                        <div class = "header">
+                            <h3>When is the early voting?</h3>
+
+                        </div>
+
+                        <p>During the early voting period, which begins the second Saturday before an election and concludes the Sunday before the election, all qualified electors have the right to mark a ballot and submit it into the tabulator.</p>
+                       
+                        <p>Early voting hours are from 8:30 am to 4:30 pm and the location for early voting is:</p>
+                   
+                        <p>Williamston City Hall</p>
+                        <p>161 E Grand River Ave</p>
+                        <p>Williamston, MI 48895</p>
+
+                    </div>
+
+                    <div class = "section">
+                        <div class = "header">
+                            <h3>By when do I need to clear my sidewalk of snow and ice?</h3>
+
+                        </div>
+
+                        <p>If you're a registered voter in the City of Williamston, your designated polling location is:</p>
+                            
+                        <p>Williamston Middle School Gym (drive behind the school)</p>
+
+                        <p>3845 Vanneter Road</p>
+
+                        <p>Williamston, MI 48895</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            </p>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 State Name. All rights reserved.</p>
+    </footer>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
+    <script>
+        // Fetch and include gov-nav.html using JavaScript
+        fetch('../CMPE-131/NAV-BAR (header)/gov-nav.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the fetched content to the body
+                document.body.innerHTML += html;
+            })
+            .catch(error => {
+                console.error('Error fetching gov-nav.html:', error);
+            });
+    </script>
+</body>
+
+</html>

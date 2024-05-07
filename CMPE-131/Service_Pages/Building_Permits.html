@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - State Website</title>
+    <link rel="stylesheet" href="serviceStyle.css">
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <main>
+        <section>
+            <div class="subpage-header">
+                <h2>Services</h2>
+                <p>Government provided services for the citizens of Williamston, MI</p>
+            </div>
+
+            <div class="select-Category">
+                <a href="../Services.html">ㅁSelect Category</a>
+            </div>
+
+            <div class = "container">
+                <div class = "item">
+                    <div class = "section">
+                        <div class = "header">
+                            <h3>How do I start a business?</h3>
+
+                            <a href = "https://www.michigan.gov/som/business">Learn more about starting businesses.</a>
+                        </div>
+
+                        <p>Building permits in Williamston are issued by the Livingston County Building Department.</p>
+
+                        <p>Livingston County Building Department</p>
+
+                        <p>2300 E Grand River Ave</p>
+
+                        <p>Howell, MI 48843</p>
+
+                        <p>Hours: Mon–Fri, 8:00 am – 5:00 pm</p>
+
+                        <p>Phone: 517-546-3240</p>
+
+                        <p>Fax: 517-546-7461</p>
+
+                        <p>Inspection Request Line: 517-546-3830</p>
+
+                        <p>General Department Email: building@livgov.com</p>
+
+                        <p>Website: </p>
+
+                        <a href = "http://livgov.com/building">http://livgov.com/building</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            </p>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 State Name. All rights reserved.</p>
+    </footer>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
+    <script>
+        // Fetch and include gov-nav.html using JavaScript
+        fetch('../CMPE-131/NAV-BAR (header)/gov-nav.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the fetched content to the body
+                document.body.innerHTML += html;
+            })
+            .catch(error => {
+                console.error('Error fetching gov-nav.html:', error);
+            });
+    </script>
+</body>
+
+</html>

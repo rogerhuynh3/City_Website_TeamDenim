@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - State Website</title>
+    <link rel="stylesheet" href="serviceStyle.css">
+    <link rel="stylesheet" href="../NAV-BAR (header)/navbar.css"/>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <main>
+        <section>
+            <div class="subpage-header">
+                <h2>Services</h2>
+                <p>Government provided services for the citizens of Williamston, MI</p>
+            </div>
+
+            <div class="select-Category">
+                <a href="../Services.html">ㅁSelect Category</a>
+            </div>
+
+
+            <div class = "container">
+                <div class = "item">
+                    <div class = "section">
+                        <div class = "header">
+                            <h3>When does the city do hydrant flushing?</h3>
+
+                        </div>
+
+                        <p>
+                            Hydrant flushing is scheduled to take place throughout the City of Williamston during the spring and summer months.
+                            It occurs during the day to facilitate proper inspection and maintenance of the water system.
+                            Residents are advised to confirm that their water is running clear before doing laundry, particularly with light-colored or white fabrics.
+                        </p>
+
+                        <p>Hydrant flushing serves the vital purpose of ensuring the functionality of the water system, ensuring it is capable of effectively combating fires when necessary.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            </p>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 State Name. All rights reserved.</p>
+    </footer>
+    <script>
+        // Fetch and include nav-bar.html using JavaScript
+        fetch('../NAV-BAR (header)/nav-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching nav-bar.html:', error);
+            });
+    </script>
+    <script>
+        // Fetch and include gov-nav.html using JavaScript
+        fetch('../CMPE-131/NAV-BAR (header)/gov-nav.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the fetched content to the body
+                document.body.innerHTML += html;
+            })
+            .catch(error => {
+                console.error('Error fetching gov-nav.html:', error);
+            });
+    </script>
+</body>
+
+</html>
