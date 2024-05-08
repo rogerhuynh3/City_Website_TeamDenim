@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <div id="nav-wrapper">
-            <nav>
-                <a href="../Home Page/Index.html">
-                <img class="header-img" src="https://lh3.googleusercontent.com/pw/AP1GczPgRwQzzg6dlKtrm2XKCVHfdW8nVxgGrgk0qbu-e52KNgxRkXZkkmQO9jHrs7S77lvI5aPlAEL7CE4lGnCV4z2RSnE9e2KtAudkyReqc9YoBMkH6IMZ=w2400" 
-                width="70" 
-                alt="City of Williamston logo"/>
-                </a>
-                <ul class="nav-bar">
-                    <li><a href="../Home Page/Index.html">HOME</a></li>
-                    <li><a href="../About Page/AboutUs.html">ABOUT</a></li>
-                    <li><a href="../Services.html">SERVICES</a></li>
-                    <li><a href="">COMMUNITY</a></li>
-                    <li><a href="../Government.html">GOVERNMENT</a></li>
-                    <li><a href="../Contact Page/Contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-        
+      <div id="nav-wrapper">
+        <nav>
+          <a href="../Home Page/Index.html">
+            <img
+              class="header-img"
+              src="https://lh3.googleusercontent.com/pw/AP1GczPgRwQzzg6dlKtrm2XKCVHfdW8nVxgGrgk0qbu-e52KNgxRkXZkkmQO9jHrs7S77lvI5aPlAEL7CE4lGnCV4z2RSnE9e2KtAudkyReqc9YoBMkH6IMZ=w2400"
+              width="70"
+              alt="City of Williamston logo"
+            />
+          </a>
+          <ul class="nav-bar">
+            <li><a href="../Home Page/Index.html">HOME</a></li>
+            <li><a href="../About Page/AboutUs.html">ABOUT</a></li>
+            <li><a href="../Services.html">SERVICES</a></li>
+            <li><a href="../NewCommunity.html">COMMUNITY</a></li>
+            <li><a href="../Government.html">GOVERNMENT</a></li>
+            <li><a href="../Contact Page/Contact.html">CONTACT</a></li>
+            <li class="search-item">
+              <form id="searchForm">
+                <input type="text" id="search" name="q" />
+                <button class="search-button" type="submit">Search</button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-</body>
+    <script>
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var query = document.getElementById("search").value.trim();
+          if (query !== "") {
+            // Specify the target pages for each search context
+            var targetPages = {
+              "Contact Page": "../Contact Page/Contact.html",
+              Government: "../Government.html",
+              AboutUs: "../About Page/AboutUs.html",
+              NewCommunity: "../NewCommunity.html",
+            };
+            // Get the current search context based on the current URL
+            var searchContext = "";
+            for (var context in targetPages) {
+              if (window.location.pathname.includes(context)) {
+                searchContext = context;
+                break;
+              }
+            }
+            // Redirect to the target page with the search query
+            if (searchContext !== "") {
+              window.location.href =
+                targetPages[searchContext] + "?q=" + encodeURIComponent(query);
+            }
+          }
+        });
+    </script>
+  </body>
 </html>
