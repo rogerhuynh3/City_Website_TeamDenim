@@ -35,14 +35,31 @@ nav a {
   width: 90%;
   max-width: 1400px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  width: 90%; /* Adjust width of the container */
+  max-width: 1400px; /* Optional: set a maximum width */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
-/* Style the image and text container */
 .item {
   border: 2px solid #bdb9b9; /* Border style and color */
   border-radius: 5px; /* Optional: rounded corners */
   margin: 0 10px 10px 10px; /* Optional margin around images */
   padding: 10px; /* Optional padding inside the container */
+  text-align: center; /* Left align the text */
+  display: inline-block;
+  vertical-align: top; /* Align items to the top */
+  width: calc(
+    100% - 5px
+  ); /* Adjust width based on the number of items per row */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+  border: 2px solid #bdb9b9; /* Border style and color */
+  border-radius: 5px; /* Optional: rounded corners */
+  margin: 0 10px 10px 10px; /* Optional margin around images */
+  padding: 20px; /* Optional padding inside the container */
   text-align: center; /* Left align the text */
   display: inline-block;
   vertical-align: top; /* Align items to the top */
