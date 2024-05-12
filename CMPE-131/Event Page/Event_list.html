@@ -109,18 +109,18 @@
     <main>
       <div class="sidebar">
         <h2>Filters</h2>
-        <label for="search">Search:</label>
-        <input type="text" id="search" oninput="filterEvents()" />
+        <label form="search">Search:</label>
+        <input type="text" id="searchInput" oninput="filterEvents()" />
         <h3>Filter by Day</h3>
-        <select id="day-filter" onchange="filterEvents()">
+        <select id="day-filter" onchange="filterDay()">
           <option value="all">All Days</option>
-          <option value="1">Monday</option>
-          <option value="2">Tuesday</option>
-          <option value="3">Wednesday</option>
-          <option value="4">Thursday</option>
-          <option value="5">Friday</option>
-          <option value="6">Saturday</option>
-          <option value="0">Sunday</option>
+          <option value="0">Monday</option>
+          <option value="1">Tuesday</option>
+          <option value="2">Wednesday</option>
+          <option value="3">Thursday</option>
+          <option value="4">Friday</option>
+          <option value="5">Saturday</option>
+          <option value="6">Sunday</option>
         </select>
         <h3>Sort by Date</h3>
         <select id="date-sort" onchange="sortEvents()">
@@ -194,36 +194,53 @@
       // Get all events
       const events = Array.from(document.getElementsByClassName("event"));
 
-      // Filter events based on search input and day filter
       function filterEvents() {
         const searchInput = document
-          .getElementById("search")
+          .getElementById("searchInput")
           .value.toLowerCase();
-        const dayFilter = document.getElementById("day-filter").value;
+
+        console.log("Search input:", searchInput);
 
         events.forEach((event) => {
           const eventName = event
             .getElementsByClassName("event-details")[0]
             .getElementsByTagName("h2")[0]
             .innerText.toLowerCase();
-          const eventNotes = event
-            .getElementsByClassName("additional-notes")[0]
-            .getElementsByClassName("notes")[0]
-            .innerText.toLowerCase();
-          const eventDay = new Date(event.getAttribute("data-date"))
-            .getDay()
-            .toString();
 
-          const matchesSearch =
-            eventName.toLowerCase().includes(searchInput) ||
-            eventNotes.toLowerCase().includes(searchInput);
-          const matchesDay = dayFilter === "all" || eventDay === dayFilter;
+          console.log("Event Name:", eventName);
 
-          if (matchesSearch && matchesDay) {
-            event.style.display = "flex";
-          } else {
-            event.style.display = "none";
-          }
+          // const eventDescription = event
+          //   .getElementsByClassName("additional-notes")[0]
+          //   .getElementsByTagName("p")[0]
+          //   .innerText.toLowerCase();
+
+          // console.log("Event Description:", eventDescription);
+
+          const matchesSearch = eventName.includes(searchInput); //|| eventDescription.includes(searchInput);
+
+          console.log("Matches search:", matchesSearch);
+
+          event.style.display = matchesSearch ? "flex" : "none";
+        });
+      }
+
+      // Filter events based on search input and day filter
+      function filterDay() {
+        const dayFilter = document.getElementById("day-filter").value;
+
+        events.forEach((event) => {
+          const eventDate = new Date(event.getAttribute("data-date"));
+          const eventDay = eventDate.getDay(); // 0 for Sunday, 1 for Monday, ..., 6 for Saturday
+
+          console.log("Event Date:", eventDate);
+          console.log("Event Day:", eventDay);
+
+          const matchesDay =
+            dayFilter === "all" || eventDay.toString() === dayFilter;
+
+          console.log("Matches day:", matchesDay);
+
+          event.style.display = matchesDay ? "flex" : "none";
         });
       }
 
