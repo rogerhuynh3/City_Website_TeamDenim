@@ -37,37 +37,39 @@
   </div>
   <script>
     document.getElementById("searchForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      let query = document.getElementById("search").value.trim().toLowerCase();
-      console.log(query);
-      let redirectUrl = "../Home Page/Index.html"; // Default redirect to Home Page
+        event.preventDefault();
+        let query = document.getElementById("search").value.trim().toLowerCase();
+        console.log("Search query:", query); // Debugging statement
 
-      // Define redirect URLs based on the search query
-      switch(query) {
-        case 'home':
-          redirectUrl = "../Home Page/Index.html";
-          break;
-        case 'about':
-          redirectUrl = "../About Page/AboutUs.html";
-          break;
-        case 'services':
-          redirectUrl = "../Services.html";
-          break;
-        case 'community':
-          redirectUrl = "../NewCommunity.html";
-          break;
-        case 'government':
-          redirectUrl = "../Government.html";
-          break;
-        case 'contact':
-          redirectUrl = "../Contact Page/Contact.html";
-          break;
-        default:
-          console.error("Invalid search query.");
-          break;
-      }
+        let redirectUrl = "../Home Page/Index.html"; // Default redirect to Home Page
 
-      window.location.href = redirectUrl;
+        // Define redirect URLs based on the search query
+        switch(query) {
+            case 'home':
+                redirectUrl = "../Home Page/Index.html";
+                break;
+            case 'about':
+                redirectUrl = "../About Page/AboutUs.html";
+                break;
+            case 'services':
+                redirectUrl = "../Services.html";
+                break;
+            case 'community':
+                redirectUrl = "../NewCommunity.html";
+                break;
+            case 'government':
+                redirectUrl = "../Government.html";
+                break;
+            case 'contact':
+                redirectUrl = "../Contact Page/Contact.html";
+                break;
+            default:
+                console.error("Invalid search query:", query); // Debugging statement
+                break;
+        }
+
+        console.log("Redirect URL:", redirectUrl); // Debugging statement
+        window.location.href = redirectUrl;
     });
   </script>
 </body>
