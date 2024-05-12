@@ -6,44 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../NAV-BAR (header)/subpage-nav.html" />
     <link rel="stylesheet" href="../../NAV-BAR (header)/navbar.css" />
-
-    <style>
-      /* Your CSS styles here */
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      .item {
-        border: 2px solid #000000;
-        border-radius: 5px;
-        margin: 0 10px 10px 10px;
-        padding: 10px;
-        text-align: center;
-        display: inline-block;
-        vertical-align: top;
-        width: calc(33.33% - 20px);
-        box-sizing: border-box;
-      }
-      .text {
-        font-size: 1.2em;
-        color: #333; /* Set text color */
-      }
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="cc_agenda.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+    />
   </head>
 
   <body>
@@ -60,218 +27,60 @@
         });
     </script>
     <main>
-      <h2>City Council members</h2>
+      <div class="container">
+        <h1 class="text-center spacing">City Council Members</h1>
       <section>
+        <h2 class="spacing">To download the agendas, click on the links:</h2>
         <a
+          class="spacing extra"
           href="../Government_Files/CC-meeting-packet-4.22.2024.pdf"
           target="_blank"
           >City Council agenda April 22, 2024</a
         >
-        <a href="../Government_Files/CC-meeting-packet-4.22.2024.pdf" download>
-          <button>Download PDF</button>
-        </a>
         <br />
-        <a href="../Government_Files/CC-Packet-04.08.24-cwn.pdf" target="_blank"
+        <a 
+          class="spacing extra" 
+          href="../Government_Files/CC-Packet-04.08.24-cwn.pdf" target="_blank"
           >City Council agenda April 8, 2024</a
         >
-        <a href="../Government_Files/CC-Packet-04.08.24-cwn.pdf" download>
-          <button>Download PDF</button>
-        </a>
         <br />
-        <a href="../Government_Files/CC-Packet-3.25.2024.pdf" target="_blank"
+        <a 
+          class="spacing extra"
+          href="../Government_Files/CC-Packet-3.25.2024.pdf" target="_blank"
           >City Council agenda March 25, 2024</a
         >
-        <a href="../Government_Files/CC-Packet-3.25.2024.pdf" download>
-          <button>Download PDF</button>
-        </a>
         <br />
-        <a href="../Government_Files/CC-NOTICE-03.11.24.pdf" target="_blank"
+        <a 
+          class="spacing extra"
+          href="../Government_Files/CC-NOTICE-03.11.24.pdf" target="_blank"
           >City Council agenda March 11, 2024 – cancelled</a
         >
-        <a href="../Government_Files/CC-NOTICE-03.11.24.pdf" download>
-          <button>Download PDF</button>
-        </a>
         <br />
       </section>
       <section>
-        <section>
-          <a href="Member.html">
-            <div
-              style="
-                border: 2px solid #000000;
-                padding: 10px;
-                border-radius: 0;
-                background-color: #f4f4f4;
-                width: 200px;
-              "
-            >
-              Members
-            </div>
-          </a>
-          <a href="Upcoming.html">
-            <div
-              style="
-                border: 2px solid #000000;
-                padding: 10px;
-                border-radius: 0;
-                background-color: #f4f4f4;
-                width: 200px;
-              "
-            >
-              Upcoming City Council Meetings
-            </div>
-          </a>
-          <a href="City_Agenda.html">
-            <div
-              style="
-                border: 2px solid #000000;
-                padding: 10px;
-                border-radius: 0;
-                background-color: #f4f4f4;
-                width: 200px;
-              "
-            >
-              City Council agendas
-            </div>
-          </a>
-          <a href="City_min.html">
-            <div
-              style="
-                border: 2px solid #000000;
-                padding: 10px;
-                border-radius: 0;
-                background-color: #f4f4f4;
-                width: 200px;
-              "
-            >
-              City Council minutes
-            </div>
-          </a>
-          <a href="City_video.html">
-            <div
-              style="
-                border: 2px solid #000000;
-                padding: 10px;
-                border-radius: 0;
-                background-color: #f4f4f4;
-                width: 200px;
-              "
-            >
-              City Council videos
-            </div>
-          </a>
-        </section>
-
-        <footer>
-          <p>&copy; 2024 State Name. All rights reserved.</p>
-        </footer>
-      </section>
-    </main>
-  </body>
-</html>
-
-<!-- -------------------------------------- Updated code with css
-added-----------------
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - State Website</title>
-    <link rel="stylesheet" href="City_Agenda.css" />
-  </head>
-  <body>
-    <header>
-      <img src="IMGS/citylogo.png" />
-      <h1>State Name</h1>
-    </header>
-    <nav>
-      <a href="Index.html">Home</a>
-      <a href="AboutUs.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="Contact.html">Contact</a>
-    </nav>
-    <main>
-      <h2>City Council members</h2>
-      <section class="parent">
-        <div>
-          <div>
-            <div>
-              <a
-                href="../Government_Files/CC-meeting-packet-4.22.2024.pdf"
-                target="_blank"
-                >City Council agenda April 22, 2024</a
-              >
-              <div>
-                <a
-                  href="../Government_Files/CC-meeting-packet-4.22.2024.pdf"
-                  download
-                  ><button>Download PDF</button></a
-                >
-              </div>
-            </div>
-            <div>
-              <a
-                href="../Government_Files/CC-Packet-04.08.24-cwn.pdf"
-                target="_blank"
-                >City Council agenda April 8, 2024</a
-              >
-              <div>
-                <a
-                  href="../Government_Files/CC-Packet-04.08.24-cwn.pdf"
-                  download
-                  ><button>Download PDF</button></a
-                >
-              </div>
-            </div>
-            <div>
-              <a
-                href="../Government_Files/CC-Packet-3.25.2024.pdf"
-                target="_blank"
-                >City Council agenda March 25, 2024</a
-              >
-              <div>
-                <a href="../Government_Files/CC-Packet-3.25.2024.pdf" download
-                  ><button>Download PDF</button></a
-                >
-              </div>
-            </div>
-            <div>
-              <a
-                href="../Government_Files/CC-NOTICE-03.11.24.pdf"
-                target="_blank"
-                >City Council agenda March 11, 2024 – cancelled</a
-              >
-              <div class>
-                <a href="../Government_Files/CC-NOTICE-03.11.24.pdf" download
-                  ><button>Download PDF</button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <section>
-          <div class="section-item1">
-            <a href="Member.html">Members</a>
-          </div>
-          <div class="section-item1">
-            <a href="Upcoming.html">Upcoming City Council Meetings</a>
-          </div>
-          <div class="section-item1">
-            <a href="City_Agenda.html">City Council agendas</a>
-          </div>
-          <div class="section-item1">
-            <a href="City_min.html">City Council minutes</a>
-          </div>
-          <div class="section-item1">
-            <a href="City_video.html">City Council videos</a>
-          </div>
+          <section class="subsubpages spacing">
+            <a class="cc_mem extra" href="../CityCouncil_Pages/Member.html">
+                Members
+            </a>
+            <a class="cc_up extra" href="../CityCouncil_Pages/Upcoming.html">
+                Upcoming City Council Meetings
+            </a>
+            <a class="cc_ag extra" href="../CityCouncil_Pages/City_Agenda.html">
+                City Council agendas
+            </a>
+            <a class="cc_min extra" href="../CityCouncil_Pages/City_min.html">
+                City Council minutes
+            </a>
+            <a class="cc_vid extra" href="../CityCouncil_Pages/City_video.html">
+                City Council videos
+            </a>
+          </section>
         </section>
       </section>
+      </div>
     </main>
     <footer>
       <p>&copy; 2024 State Name. All rights reserved.</p>
     </footer>
   </body>
-</html> -->
+</html>
