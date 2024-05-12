@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="navbar.css" />
-    <title>Home</title>
-  </head>
-  <body>
-    <div id="container">
-      <div id="nav-wrapper">
-        <nav>
-          <a href="../Home Page/Index.html">
-            <img
-              class="header-img"
-              src="https://lh3.googleusercontent.com/pw/AP1GczPgRwQzzg6dlKtrm2XKCVHfdW8nVxgGrgk0qbu-e52KNgxRkXZkkmQO9jHrs7S77lvI5aPlAEL7CE4lGnCV4z2RSnE9e2KtAudkyReqc9YoBMkH6IMZ=w2400"
-              width="70"
-              alt="City of Williamston logo"
-            />
-          </a>
-          <ul class="nav-bar">
-            <li><a href="../Home Page/Index.html">HOME</a></li>
-            <li><a href="../About Page/AboutUs.html">ABOUT</a></li>
-            <li><a href="../Services.html">SERVICES</a></li>
-            <li><a href="../NewCommunity.html">COMMUNITY</a></li>
-            <li><a href="../Government.html">GOVERNMENT</a></li>
-            <li><a href="../Contact Page/Contact.html">CONTACT</a></li>
-            <li class="search-item">
-              <form id="searchForm">
-                <input type="text" id="search" name="q" />
-                <button class="search-button" type="submit">Search</button>
-              </form>
-            </li>
-          </ul>
-        </nav>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="navbar.css" />
+  <title>Home</title>
+</head>
+<body>
+  <div id="container">
+    <div id="nav-wrapper">
+      <nav>
+        <a href="../Home Page/Index.html">
+          <img
+            class="header-img"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPgRwQzzg6dlKtrm2XKCVHfdW8nVxgGrgk0qbu-e52KNgxRkXZkkmQO9jHrs7S77lvI5aPlAEL7CE4lGnCV4z2RSnE9e2KtAudkyReqc9YoBMkH6IMZ=w2400"
+            width="70"
+            alt="City of Williamston logo"
+          />
+        </a>
+        <ul class="nav-bar">
+          <li><a href="../Home Page/Index.html">HOME</a></li>
+          <li><a href="../About Page/AboutUs.html">ABOUT</a></li>
+          <li><a href="../Services.html">SERVICES</a></li>
+          <li><a href="../NewCommunity.html">COMMUNITY</a></li>
+          <li><a href="../Government.html">GOVERNMENT</a></li>
+          <li><a href="../Contact Page/Contact.html">CONTACT</a></li>
+          <li class="search-item">
+            <form id="searchForm">
+              <input type="text" id="search" name="q" />
+              <button class="search-button" type="submit">Search</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <script>
-      document
-        .getElementById("searchForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
+  </div>
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let query = document.getElementById("search").value.trim().toLowerCase();
+      console.log(query);
+      let redirectUrl = "../Home Page/Index.html"; // Default redirect to Home Page
 
-          var query = document.getElementById("search").value.trim();
-          if (query !== "") {
-            var targetPages = {
-              Home: "../Home Page/Index.html",
-              About: "../About Page/AboutUs.html",
-              Services: "../Services.html",
-              Community: "../NewCommunity.html",
-              Government: "../Government.html",
-              Contact: "../Contact Page/Contact.html",
-            };
+      // Define redirect URLs based on the search query
+      switch(query) {
+        case 'home':
+          redirectUrl = "../Home Page/Index.html";
+          break;
+        case 'about':
+          redirectUrl = "../About Page/AboutUs.html";
+          break;
+        case 'services':
+          redirectUrl = "../Services.html";
+          break;
+        case 'community':
+          redirectUrl = "../NewCommunity.html";
+          break;
+        case 'government':
+          redirectUrl = "../Government.html";
+          break;
+        case 'contact':
+          redirectUrl = "../Contact Page/Contact.html";
+          break;
+        default:
+          console.error("Invalid search query.");
+          break;
+      }
 
-            var searchContext = Object.keys(targetPages).find((key) =>
-              window.location.pathname.includes(key)
-            );
-
-            if (searchContext) {
-              window.location.href =
-                targetPages[searchContext] + "?q=" + encodeURIComponent(query);
-            } else {
-              console.error("Search context not found.");
-            }
-          } else {
-            console.error("Search query is empty.");
-          }
-        });
-    </script>
-  </body>
+      window.location.href = redirectUrl;
+    });
+  </script>
+</body>
 </html>

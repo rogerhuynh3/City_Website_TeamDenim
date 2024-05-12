@@ -4,36 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - State Website</title>
+    <link rel="stylesheet" href="../../NAV-BAR (header)/subpage-nav.html" />
+    <link rel="stylesheet" href="../../NAV-BAR (header)/navbar.css" />
+
     <style>
       /* Your CSS styles here */
       body {
-        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-      }
-      header {
-        background-color: #000000;
-        color: #ffffff;
-        padding: 10px 20px;
-        text-align: center;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px; /* Optional: rounded corners */
-      }
-      nav {
-        background-color: #444;
-        color: #fff;
-        text-align: center;
-        padding: 10px 20px;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 10px;
       }
       .container {
         display: flex;
@@ -57,26 +36,29 @@
         color: #333; /* Set text color */
       }
       footer {
-        background-color: #444;
-        color: #fff;
+        background-color: #333;
+        color: white;
         text-align: center;
-        padding: 10px 20px;
-        margin-top: auto; /* Push the footer to the bottom */
+        padding: 10px 0;
+        bottom: 0;
+        width: 100%;
       }
     </style>
   </head>
 
   <body>
-    <header>
-      <img src="IMGS/citylogo.png" />
-      <h1>State Name</h1>
-    </header>
-    <nav>
-      <a href="Index.html">Home</a>
-      <a href="AboutUs.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="Contact.html">Contact</a>
-    </nav>
+    <div id="navbar-container"></div>
+    <script>
+      // Fetch and include nav-bar.html using JavaScript
+      fetch("../../NAV-BAR (header)/nav-bar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navbar-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error fetching nav-bar.html:", error);
+        });
+    </script>
     <main>
       <h2>City Council members</h2>
       <section>
@@ -188,81 +170,108 @@
   </body>
 </html>
 
-
--------------------------------------- Updated code with css added-----------------
+<!-- -------------------------------------- Updated code with css
+added-----------------
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - State Website</title>
     <link rel="stylesheet" href="City_Agenda.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="IMGS/citylogo.png" />
-        <h1>State Name</h1>
+      <img src="IMGS/citylogo.png" />
+      <h1>State Name</h1>
     </header>
     <nav>
-        <a href="Index.html">Home</a>
-        <a href="AboutUs.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="Contact.html">Contact</a>
+      <a href="Index.html">Home</a>
+      <a href="AboutUs.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="Contact.html">Contact</a>
     </nav>
     <main>
-        <h2>City Council members</h2>
-        <section class="parent">  
+      <h2>City Council members</h2>
+      <section class="parent">
+        <div>
+          <div>
             <div>
-                <div>
-                    <div>
-                        <a href="../Government_Files/CC-meeting-packet-4.22.2024.pdf" target="_blank">City Council agenda April 22, 2024</a>
-                        <div>
-                            <a href="../Government_Files/CC-meeting-packet-4.22.2024.pdf" download><button>Download PDF</button></a>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="../Government_Files/CC-Packet-04.08.24-cwn.pdf" target="_blank">City Council agenda April 8, 2024</a>
-                        <div>
-                            <a href="../Government_Files/CC-Packet-04.08.24-cwn.pdf" download><button>Download PDF</button></a>
-                        </div>
-                    </div>
-                 <div>
-                        <a href="../Government_Files/CC-Packet-3.25.2024.pdf" target="_blank">City Council agenda March 25, 2024</a>
-                        <div>
-                            <a href="../Government_Files/CC-Packet-3.25.2024.pdf" download><button>Download PDF</button></a>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="../Government_Files/CC-NOTICE-03.11.24.pdf" target="_blank">City Council agenda March 11, 2024 – cancelled</a>
-                        <div class>
-                            <a href="../Government_Files/CC-NOTICE-03.11.24.pdf" download><button>Download PDF</button></a>
-                        </div>
-                    </div>
-                </div>
-          
+              <a
+                href="../Government_Files/CC-meeting-packet-4.22.2024.pdf"
+                target="_blank"
+                >City Council agenda April 22, 2024</a
+              >
+              <div>
+                <a
+                  href="../Government_Files/CC-meeting-packet-4.22.2024.pdf"
+                  download
+                  ><button>Download PDF</button></a
+                >
+              </div>
             </div>
-            <section>
-                <div class="section-item1">
-                    <a href="Member.html">Members</a>
-                </div>
-                <div class="section-item1">
-                    <a href="Upcoming.html">Upcoming City Council Meetings</a>
-                </div>
-                <div class="section-item1">
-                    <a href="City_Agenda.html">City Council agendas</a>
-                </div>
-                <div class="section-item1">
-                    <a href="City_min.html">City Council minutes</a>
-                </div>
-                <div class="section-item1">
-                    <a href="City_video.html">City Council videos</a>
-                </div>
-            </section>
+            <div>
+              <a
+                href="../Government_Files/CC-Packet-04.08.24-cwn.pdf"
+                target="_blank"
+                >City Council agenda April 8, 2024</a
+              >
+              <div>
+                <a
+                  href="../Government_Files/CC-Packet-04.08.24-cwn.pdf"
+                  download
+                  ><button>Download PDF</button></a
+                >
+              </div>
+            </div>
+            <div>
+              <a
+                href="../Government_Files/CC-Packet-3.25.2024.pdf"
+                target="_blank"
+                >City Council agenda March 25, 2024</a
+              >
+              <div>
+                <a href="../Government_Files/CC-Packet-3.25.2024.pdf" download
+                  ><button>Download PDF</button></a
+                >
+              </div>
+            </div>
+            <div>
+              <a
+                href="../Government_Files/CC-NOTICE-03.11.24.pdf"
+                target="_blank"
+                >City Council agenda March 11, 2024 – cancelled</a
+              >
+              <div class>
+                <a href="../Government_Files/CC-NOTICE-03.11.24.pdf" download
+                  ><button>Download PDF</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <section>
+          <div class="section-item1">
+            <a href="Member.html">Members</a>
+          </div>
+          <div class="section-item1">
+            <a href="Upcoming.html">Upcoming City Council Meetings</a>
+          </div>
+          <div class="section-item1">
+            <a href="City_Agenda.html">City Council agendas</a>
+          </div>
+          <div class="section-item1">
+            <a href="City_min.html">City Council minutes</a>
+          </div>
+          <div class="section-item1">
+            <a href="City_video.html">City Council videos</a>
+          </div>
         </section>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 State Name. All rights reserved.</p>
+      <p>&copy; 2024 State Name. All rights reserved.</p>
     </footer>
-</body>
-</html>
+  </body>
+</html> -->

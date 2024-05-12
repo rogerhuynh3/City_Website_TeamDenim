@@ -206,14 +206,24 @@
             .getElementsByClassName("event-details")[0]
             .getElementsByTagName("h2")[0]
             .innerText.toLowerCase();
+          const eventNotes = event
+            .getElementsByClassName("additional-notes")[0]
+            .getElementsByClassName("notes")[0]
+            .innerText.toLowerCase();
           const eventDay = new Date(event.getAttribute("data-date"))
             .getDay()
             .toString();
 
-          const matchesSearch = eventName.includes(searchInput);
+          const matchesSearch =
+            eventName.toLowerCase().includes(searchInput) ||
+            eventNotes.toLowerCase().includes(searchInput);
           const matchesDay = dayFilter === "all" || eventDay === dayFilter;
 
-          event.style.display = matchesSearch && matchesDay ? "flex" : "none";
+          if (matchesSearch && matchesDay) {
+            event.style.display = "flex";
+          } else {
+            event.style.display = "none";
+          }
         });
       }
 
