@@ -43,26 +43,27 @@
 
           var query = document.getElementById("search").value.trim();
           if (query !== "") {
-            // Specify the target pages for each search context
             var targetPages = {
-              "Contact Page": "../Contact Page/Contact.html",
+              Home: "../Home Page/Index.html",
+              About: "../About Page/AboutUs.html",
+              Services: "../Services.html",
+              Community: "../NewCommunity.html",
               Government: "../Government.html",
-              AboutUs: "../About Page/AboutUs.html",
-              NewCommunity: "../NewCommunity.html",
+              Contact: "../Contact Page/Contact.html",
             };
-            // Get the current search context based on the current URL
-            var searchContext = "";
-            for (var context in targetPages) {
-              if (window.location.pathname.includes(context)) {
-                searchContext = context;
-                break;
-              }
-            }
-            // Redirect to the target page with the search query
-            if (searchContext !== "") {
+
+            var searchContext = Object.keys(targetPages).find((key) =>
+              window.location.pathname.includes(key)
+            );
+
+            if (searchContext) {
               window.location.href =
                 targetPages[searchContext] + "?q=" + encodeURIComponent(query);
+            } else {
+              console.error("Search context not found.");
             }
+          } else {
+            console.error("Search query is empty.");
           }
         });
     </script>
